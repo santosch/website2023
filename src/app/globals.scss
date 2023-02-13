@@ -21,7 +21,7 @@
   --font-slab: "Roboto Slab", "Times New Roman", Times, serif;
 
   --foreground: #eeeeee;
-  --foreground--dark: #757575;
+  --foreground--dark: #777777;
   --background: #212121;
   --background-light: #424242;
   --highlight: #00bbff;
@@ -91,5 +91,17 @@ ul {
   li:not(:last-child) {
     margin-bottom: 10px;
   }
+}
+
+p:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
 }
 

@@ -4,9 +4,9 @@ import type {ReactNode} from "react";
 export default function Card({title, children}: { title: string; children: ReactNode }): JSX.Element {
     return (
         <div className={styles.card}>
-            <h2 className={styles.cardTitle}>
+            <h3 className={styles.cardTitle}>
                 {title}
-            </h2>
+            </h3>
             <div>
                 {children}
             </div>
