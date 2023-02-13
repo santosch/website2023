@@ -1,4 +1,7 @@
-import './globals.css'
+import { Roboto_Slab } from '@next/font/google'
+import './globals.scss'
+
+const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
@@ -6,13 +9,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="de">
       <head />
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   )
 }
