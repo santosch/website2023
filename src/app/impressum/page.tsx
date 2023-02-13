@@ -4,9 +4,9 @@ import Card from "@santosch/components/Card/Card";
 export default function Impressum(): React.ReactNode {
     return (
         <>
-            <h1>
+            <h2>
                 Impressum
-            </h1>
+            </h2>
 
             <Card title="Angaben gemäß § 5 TMG:">
                 <p>

@@ -5,9 +5,9 @@ import Card from "@santosch/components/Card/Card";
 export default function Datenschutz(): React.ReactNode {
     return (
         <>
-            <h1>
+            <h2>
                 Datenschutzerklärung
-            </h1>
+            </h2>
 
             <p className={styles.lead}>
                 Ich freuen mich sehr über Ihr Interesse an mir und meiner Website. Datenschutz hat einen

@@ -1,0 +1,134 @@
+$glassHeight: 210px;
+$bottomGlassHeight: 90px;
+$offset: $bottomGlassHeight / 2;
+$border: 1px solid rgba(33, 33, 33, 0.5);
+
+@mixin glassify() {
+  background-color: rgba(66, 66, 66, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.image {
+  background-image: url("/assets/images/sa-moewe-bodensee.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 548px;
+  background-position: left bottom;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: $offset;
+
+  box-shadow: inset 0px -18px 5px -15px rgba(0, 0, 0, 0.5);
+}
+
+.glass {
+  @include glassify();
+  box-sizing: content-box;
+  height: $glassHeight;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  position: relative;
+  z-index: 1;
+  border: $border;
+}
+
+.bottomGlass {
+  @include glassify();
+  height: $bottomGlassHeight;
+  border-bottom: 2px solid var(--highlight);
+  border-radius: 16px 16px 0 0;
+
+  width: var(--max-width);
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: - $offset;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.branch1,
+.branch2,
+.branch3,
+.branch4,
+.branch5 {
+  position: absolute;
+  bottom: -23px;
+  transform: rotate(90deg);
+  font-size: 30px;
+  color: var(--highlight);
+}
+
+.branch1 {
+  left: 20px;
+}
+
+.branch2 {
+  transform: rotate(90deg) scale(-1, -1);
+  left: 36px;
+}
+
+.branch3 {
+  transform: scale(1, -1) rotate(90deg) ;
+  left: 190px;
+  bottom: -9px;
+}
+
+.branch4 {
+  left: 210px;
+}
+
+.branch5 {
+  left: auto;
+  right: 20px;
+}
+
+.social {
+  width: $glassHeight / 3;
+  flex: 0 0 $glassHeight / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-right: $border;
+  border-left: $border;
+}
+
+.socialIcon {
+  flex: 1 1 $glassHeight / 3;
+  background-color: transparent;
+  transition: 0.3s background-color, 0.3s color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  border-bottom: $border;
+
+  &:hover,
+  &:active {
+    background-color: rgba(66, 66, 66, 0.5);
+  }
+}
+
+.photo {
+  flex: 0 0 $glassHeight;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--background-light);
+  z-index: 1;
+  position: relative;
+}

@@ -1,4 +1,5 @@
 import './globals.scss'
+import Hero from "@santosch/components/Hero/Hero";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,10 @@ export default function RootLayout({
     <html lang="de">
       <head />
       <body>
-        {children}
+        <Hero/>
+        <main>
+            {children}
+        </main>
       </body>
     </html>
   )
