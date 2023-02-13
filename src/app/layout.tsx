@@ -1,7 +1,4 @@
-import { Roboto_Slab } from '@next/font/google'
 import './globals.scss'
-
-const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,

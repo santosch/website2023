@@ -1,9 +1,8 @@
 export default function Head() {
-    const url = 'https://sebastian-antosch.de/';    
+    const url = 'https://sebastian-antosch.de/';
     const title = 'Sebastian Antosch';
     const description = 'Sebastian Antosch ist Softwareentwickler (Web, Frontend/Full-Stack) und UI-Enthusiast aus Augsburg.';
     const banner = '/assets/images/socialbanner.jpg';
-        
 
     return (
         <>
@@ -25,7 +24,7 @@ export default function Head() {
             />
             <meta name="twitter:image" content={banner}/>
 
-            <meta property="og:title" content={title} />
+            <meta property="og:title" content={title}/>
             <meta property="og:url" content={url}/>
             <meta property="og:image"
                   content={url + banner}
