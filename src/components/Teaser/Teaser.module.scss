@@ -68,6 +68,21 @@ $socialDiameter: 40px;
   line-height: $socialDiameter - 2px;
   margin-bottom: 36px;
   border: 2px solid var(--highlight);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  transition: 0.3s color;
+
+  svg {
+      transition: 0.3s transform;
+  }
+
+  &:hover,
+  &:active {
+    color: var(--foreground);
+
+    svg {
+      transform: rotate(30deg);
+    }
+  }
 }
 
 .quote {
@@ -77,6 +92,7 @@ $socialDiameter: 40px;
   border-radius: var(--border-radius);
   color: var(--background);
   backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
 .quoteText {
