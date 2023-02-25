@@ -1,4 +1,6 @@
 
+$socialDiameter: 40px;
+
 @mixin mobile() {
   @media (max-width: 800px) {
     @content
@@ -47,4 +49,40 @@
   max-width: 100%;
   margin: 0 auto;
   border-left: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+  margin-left: - (($socialDiameter + 4) / 2);
+}
+
+.socialIcon {
+  display: block;
+  width: $socialDiameter;
+  height: $socialDiameter;
+  background-color: var(--background);
+  border-radius: 50%;
+  text-align: center;
+  line-height: $socialDiameter - 2px;
+  margin-bottom: 36px;
+  border: 2px solid var(--highlight);
+}
+
+.quote {
+  flex: 0 0 60%;
+  padding: 1rem 2rem;
+  background-color: rgba(#eeeeee, 0.7);
+  border-radius: var(--border-radius);
+  color: var(--background);
+  backdrop-filter: blur(10px);
+}
+
+.quoteText {
+  font-size: 1.1rem;
+}
+
+.quoteAuthor {
+  text-align: right;
 }
