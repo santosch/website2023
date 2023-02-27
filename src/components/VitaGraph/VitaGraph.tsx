@@ -7,14 +7,14 @@ import {createGitgraph, templateExtend, TemplateName} from "@gitgraph/js";
 const vitaTemplate = templateExtend(TemplateName.Metro, {
    commit: {
        message: {
-           // display: false,
+           display: false,
            displayAuthor: false,
            displayHash: false,
        }
    },
    branch: {
        lineWidth: 4,
-       spacing: 28,
+       spacing: 32,
        label: {
            display: false,
        },
@@ -35,7 +35,7 @@ const getBranchOptions = (name: string, color: string): GitgraphBranchOptions<an
                     strokeWidth: 2,
                     color: '#212121',
                 }
-            }
+            },
         }
     };
 }
