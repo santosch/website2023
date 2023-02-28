@@ -67,4 +67,9 @@ $eventDiameter: 30px;
   border-radius: 50%;
   z-index: 2;
   background-color: var(--background);
+  transition: 0.3s border-width;
+
+  &__highlighted {
+    border-width: $eventDiameter / 2;
+  }
 }

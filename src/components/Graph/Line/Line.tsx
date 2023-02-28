@@ -22,7 +22,7 @@ export default function Line(
         x?: string;
     }): JSX.Element {
 
-    const {onHighlight} = useContext(GraphContext);
+    const {onHighlight, highlightedEvent} = useContext(GraphContext);
 
     const onMouseOver = useCallback(() => {
         onHighlight?.(event!);
@@ -66,7 +66,12 @@ export default function Line(
 
             {event &&
                 <div
-                    className={styles.event}
+                    className={classNames(
+                        styles.event,
+                        {
+                            [styles.event__highlighted]: highlightedEvent === event
+                        }
+                    )}
                     style={{borderColor: color}}
                     onMouseOver={onMouseOver}
                     onMouseOut={onMouseOut}

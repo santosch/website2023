@@ -1,21 +1,22 @@
 import {createContext, ReactNode} from "react";
 
-export const GraphContext = createContext({
-    onHighlight: (event: string | null): void => {
-        console.info(`${event ?? 'nothing'} highlighted`);
-    }
-})
+export const GraphContext = createContext<{
+   highlightedEvent?: string;
+   onHighlight?: (event: string | null) => void;
+}>({});
 
 export default function Graph(
     {
         children,
-        onHighlight
+        onHighlight,
+        highlightedEvent,
     } : {
         children?: ReactNode;
-        onHighlight: (event: string | null) => void;
+        onHighlight?: (event: string | null) => void;
+        highlightedEvent?: string;
     }): JSX.Element {
     return (
-        <GraphContext.Provider value={{onHighlight}}>
+        <GraphContext.Provider value={{onHighlight, highlightedEvent}}>
             {children}
         </GraphContext.Provider>
     );
