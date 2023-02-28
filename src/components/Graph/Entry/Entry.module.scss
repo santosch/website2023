@@ -1,0 +1,17 @@
+$slotWidth: 40px;
+
+.entry {
+  display: flex;
+}
+
+.slot {
+  flex: 0 0 $slotWidth;
+  width: $slotWidth;
+  min-height: $slotWidth;
+  display: flex; // ensure content has full height
+}
+
+.content {
+  flex: 1 1 auto;
+  min-width: 0; // allow it to shrink
+}
