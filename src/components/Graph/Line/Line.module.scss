@@ -1,10 +1,10 @@
 $lineWidth: 4px;
+$offset: $lineWidth / 2;
 $eventDiameter: 30px;
 
 .lineContainer {
   position: relative;
-  height: 40px;
-  width: 40px;
+  width: 100%;
 }
 
 .line {
@@ -12,7 +12,7 @@ $eventDiameter: 30px;
   top: 0;
   bottom: 0;
   width: $lineWidth;
-  left: calc(50% - $lineWidth / 2);
+  left: calc(50% - $offset);
   background-color: var(--highlight);
 }
 
@@ -21,17 +21,17 @@ $eventDiameter: 30px;
   left: 0;
   right: 0;
   height: $lineWidth;
-  top: calc(50% - $lineWidth / 2);
+  top: calc(50% - $offset);
   z-index: 1;
   background-color: var(--highlight);
 }
 
 .curve {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  top: - $offset;
+  left: - $offset;
+  bottom: - $offset;
+  right: - $offset;
   z-index: 1;
   border-radius: 50%;
   border-style: solid;
@@ -40,19 +40,19 @@ $eventDiameter: 30px;
   border-left-color: var(--highlight);
 
   &__br {
-    transform: translate(50%, 50%) rotate(45deg);
+    transform: translate(calc(50% - #{$offset}), calc(50% - #{$offset})) rotate(45deg);
   }
 
   &__bl {
-    transform: translate(-50%, 50%) rotate(135deg);
+    transform: translate(calc(-50% + #{$offset}), calc(50% - #{$offset})) rotate(135deg);
   }
 
   &__tl {
-    transform: translate(-50%, -50%) rotate(225deg);
+    transform: translate(calc(-50% + #{$offset}), calc(-50% + #{$offset})) rotate(225deg);
   }
 
   &__tr {
-    transform: translate(50%, -50%) rotate(315deg);
+    transform: translate(calc(50% - #{$offset}), calc(-50% + #{$offset})) rotate(315deg);
   }
 }
 
@@ -60,7 +60,11 @@ $eventDiameter: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
+  width: $eventDiameter;
+  height: $eventDiameter;
   transform: translate(-50%, -50%);
   border: $lineWidth / 2 solid var(--highlight);
   border-radius: 50%;
+  z-index: 2;
+  background-color: var(--background);
 }

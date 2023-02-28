@@ -11,7 +11,7 @@ export default function Line(
         bl,
         tr,
         tl,
-        xColor,
+        x,
     }: {
         event?: string;
         color?: string;
@@ -19,7 +19,7 @@ export default function Line(
         bl?: string;
         tr?: string;
         tl?: string;
-        xColor?: string;
+        x?: string;
     }): JSX.Element {
 
     const {onHighlight} = useContext(GraphContext);
@@ -35,15 +35,17 @@ export default function Line(
     return (
 
         <div className={styles.lineContainer}>
-            <div
-                className={styles.line}
-                style={{backgroundColor: color}}
-            />
+            {color &&
+                <div
+                    className={styles.line}
+                    style={{backgroundColor: color}}
+                />
+            }
 
-            {xColor &&
+            {x &&
                 <div
                     className={styles.crossLine}
-                    style={{backgroundColor: xColor}}
+                    style={{backgroundColor: x}}
                 />
             }
 
