@@ -14,7 +14,8 @@ export default function Graph(
         children?: ReactNode;
         onHighlight?: (event: string | null) => void;
         highlightedEvent?: string;
-    }): JSX.Element {
+    }
+): JSX.Element {
     return (
         <GraphContext.Provider value={{onHighlight, highlightedEvent}}>
             {children}

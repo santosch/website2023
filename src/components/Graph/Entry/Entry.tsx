@@ -14,7 +14,8 @@ export default function Entry(
         s3?: ReactNode;
         s4?: ReactNode;
         children?: ReactNode;
-    }): JSX.Element {
+    }
+): JSX.Element {
     return (
         <div className={styles.entry}>
             <div className={styles.slot}>

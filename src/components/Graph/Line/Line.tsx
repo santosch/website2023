@@ -20,7 +20,8 @@ export default function Line(
         tr?: string;
         tl?: string;
         x?: string;
-    }): JSX.Element {
+    }
+): JSX.Element {
 
     const {onHighlight, highlightedEvent} = useContext(GraphContext);
 
