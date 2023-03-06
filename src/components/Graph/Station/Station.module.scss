@@ -1,24 +1,36 @@
+$imageSize: 50px;
+
 .container {
   display: flex;
+  padding-left: var(--left-col-width);
 }
 
-.left {
-  flex: 0 0 var(--left-col-width);
-  text-align: right;
+.imageContainer {
+  flex: 0 0 $imageSize;
+  position: relative;
 }
 
 .image {
-  width: 50px;
-  height: 50px;
+  width: $imageSize;
+  height: $imageSize;
   border-radius: 50%;
+
+  position: absolute;
+  right: 0;
+  bottom: calc(#{- $imageSize / 2} + var(--half-line-width));
 }
 
-.right {
+.content {
   flex: 1 1 auto;
 }
 
+.text {
+  font-size: 1.3rem;
+  padding-right: 1rem;
+}
+
 .line {
-  height: 4px;
+  height: var(--line-width);
   background-color: var(--background-light);
   position: relative;
   overflow: hidden;
@@ -30,13 +42,18 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--station-color);
-    transform: translateX(-100%);
-    transition: 0.3s transform;
+    border-bottom: var(--line-width) solid var(--station-color);
+    transform: translateX(100%);
+    transition: 0.5s transform 1.0s ease-in;
+
+    @media print {
+      transform: translateX(0);
+    }
   }
 
   &__highlighted {
     &:after {
+      transition: 0.5s transform 0s ease-out;
       transform: translateX(0);
     }
   }

@@ -19,9 +19,6 @@ export default function CreaWebdev(): JSX.Element {
                 Performanceoptimierung (PageSpeed); Umsetzung von OnPage-SEO-Maßnahmen;
                 Programmierung von Newslettertemplates (CleverReach, Emarsys); Einführung von GIT und SASS.
             </p>
-            <p>
-
-            </p>
         </Step>
     );
 }

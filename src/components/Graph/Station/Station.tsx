@@ -28,7 +28,20 @@ export default function Station(
             onMouseOver={highlight}
             onMouseOut={unHighlight}
         >
-            <div className={styles.left}>
+            <div className={styles.content}>
+                <h4 className={styles.text}>
+                    {children}
+                </h4>
+
+                <div className={classNames(
+                        styles.line,
+                        {
+                            [styles.line__highlighted]: isHighlighted,
+                        }
+                    )}
+                />
+            </div>
+            <div className={styles.imageContainer}>
                 {image &&
                     <Image
                         src={image}
@@ -38,17 +51,6 @@ export default function Station(
                         height={50}
                     />
                 }
-            </div>
-            <div className={styles.right}>
-                {children}
-
-                <div className={classNames(
-                        styles.line,
-                        {
-                            [styles.line__highlighted]: isHighlighted,
-                        }
-                    )}
-                />
             </div>
         </div>
     );

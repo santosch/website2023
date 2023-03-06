@@ -9,9 +9,27 @@
   text-align: right;
   color: var(--foreground--dark);
   transition: 0.3s color;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 0.3s background-color;
+  }
 
   &__highlighted {
     color: var(--step-color);
+
+    &:after {
+      background-color: var(--step-color);
+    }
   }
 }
 

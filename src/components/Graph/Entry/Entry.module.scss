@@ -1,6 +1,10 @@
 .entry {
   display: flex;
 
+  @media print {
+    break-inside: avoid;
+  }
+
   &__empty {
     @media print {
       display: none;
