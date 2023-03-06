@@ -1,23 +1,24 @@
-import {createContext, ReactNode} from "react";
-
-export const GraphContext = createContext<{
-   highlightedEvent?: string;
-   onHighlight?: (event: string | null) => void;
-}>({});
+import type {ReactNode} from "react";
+import GraphContext from "./GraphContext";
+import {useState} from "react";
 
 export default function Graph(
     {
         children,
-        onHighlight,
-        highlightedEvent,
     } : {
         children?: ReactNode;
-        onHighlight?: (event: string | null) => void;
-        highlightedEvent?: string;
     }
 ): JSX.Element {
+
+    const [highlightedEvent, setHighlightedEvent] = useState<string|null>(null)
+
     return (
-        <GraphContext.Provider value={{onHighlight, highlightedEvent}}>
+        <GraphContext.Provider value={
+            {
+                onHighlight: setHighlightedEvent,
+                highlightedEvent
+            }
+        }>
             {children}
         </GraphContext.Provider>
     );

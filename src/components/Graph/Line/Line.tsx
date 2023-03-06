@@ -1,12 +1,11 @@
 import styles from './Line.module.scss'
 import classNames from "classnames";
-import {useCallback, useContext} from "react";
-import {GraphContext} from "@santosch/components/Graph/Graph";
+import useHighlight from "@santosch/components/Graph/useHighlight";
 
 export default function Line(
     {
         color,
-        event,
+        event = '',
         br,
         bl,
         tr,
@@ -23,15 +22,7 @@ export default function Line(
     }
 ): JSX.Element {
 
-    const {onHighlight, highlightedEvent} = useContext(GraphContext);
-
-    const onMouseOver = useCallback(() => {
-        onHighlight?.(event!);
-    }, [onHighlight, event]);
-
-    const onMouseOut = useCallback(() => {
-        onHighlight?.(null);
-    }, [onHighlight]);
+    const [isHighlighted, highlight, unHighlight] = useHighlight(event, true);
 
     return (
 
@@ -70,12 +61,12 @@ export default function Line(
                     className={classNames(
                         styles.event,
                         {
-                            [styles.event__highlighted]: highlightedEvent === event
+                            [styles.event__highlighted]: isHighlighted
                         }
                     )}
                     style={{borderColor: color}}
-                    onMouseOver={onMouseOver}
-                    onMouseOut={onMouseOut}
+                    onMouseOver={highlight}
+                    onMouseOut={unHighlight}
                 />
             }
         </div>

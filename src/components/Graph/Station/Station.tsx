@@ -2,8 +2,7 @@ import type {CSSProperties, ReactNode} from "react";
 import styles from "./Station.module.scss"
 import Image from "next/image";
 import classNames from "classnames";
-import {useContext} from "react";
-import {GraphContext} from "@santosch/components/Graph/Graph";
+import useHighlight from "../useHighlight";
 
 export default function Station(
     {
@@ -15,17 +14,19 @@ export default function Station(
         children?: ReactNode,
         image?: string,
         color?: string,
-        eventKey?: string
+        eventKey: string
 
     }
 ): JSX.Element {
-    const {onHighlight, highlightedEvent} = useContext(GraphContext);
     const cssVars = {'--station-color': color} as CSSProperties;
+    const [isHighlighted, highlight, unHighlight] = useHighlight(eventKey)
 
     return (
         <div
             className={styles.container}
             style={cssVars}
+            onMouseOver={highlight}
+            onMouseOut={unHighlight}
         >
             <div className={styles.left}>
                 {image &&
@@ -44,7 +45,7 @@ export default function Station(
                 <div className={classNames(
                         styles.line,
                         {
-                            [styles.line__highlighted]: highlightedEvent && eventKey && highlightedEvent.startsWith(eventKey),
+                            [styles.line__highlighted]: isHighlighted,
                         }
                     )}
                 />
