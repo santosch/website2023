@@ -22,7 +22,7 @@ export default function Line(
     }
 ): JSX.Element {
 
-    const [isHighlighted, highlight, unHighlight] = useHighlight(event, true);
+    const [isHighlighted, highlight, unHighlight] = useHighlight(event);
 
     return (
 

@@ -19,7 +19,7 @@ export default function Station(
     }
 ): JSX.Element {
     const cssVars = {'--station-color': color} as CSSProperties;
-    const [isHighlighted, highlight, unHighlight] = useHighlight(eventKey)
+    const [isHighlighted, highlight, unHighlight] = useHighlight(eventKey, true)
 
     return (
         <div
