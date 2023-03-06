@@ -1,0 +1,60 @@
+.container {
+  background-color: var(--background-dark);
+  border-top: var(--line-width) solid var(--highlight-dark);
+}
+
+.inner {
+  margin: calc(-1 * var(--line-width)) auto 0 auto;
+  width: var(--max-width);
+  max-width: 100%;
+  min-height: 100px;
+  border-left: var(--border);
+  position: relative;
+  display: flex;
+  padding-top: var(--line-width);
+}
+
+.nav {
+  flex: 0 0 auto;
+}
+
+.link {
+  display: block;
+  margin: 1rem 0;
+  line-height: var(--graph-event-diameter);
+  padding-left: calc(1rem + (var(--graph-event-diameter) / 2));
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    width: var(--graph-event-diameter);
+    height: var(--graph-event-diameter);
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (var(--graph-event-diameter) / 2) - var(--half-line-width));
+    background-color: var(--background);
+    border-radius: 50%;
+    border: 2px solid var(--highlight);
+    transition: 0.3s border-width;
+  }
+
+  &:hover:before {
+    border-width: calc(var(--graph-event-diameter) / 4);
+  }
+
+  &__active {
+    &:before {
+      border-width: calc(var(--graph-event-diameter) / 2) !important;
+    }
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+  padding: 1rem 0 1rem 2rem;
+  text-align: right;
+  color: var(--foreground-dark);
+  font-size: 0.9rem;
+}

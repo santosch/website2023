@@ -21,8 +21,9 @@
   --font-slab: "Roboto Slab", "Times New Roman", Times, serif;
 
   --foreground: #eeeeee;
-  --foreground--dark: #888888;
+  --foreground-dark: #888888;
   --background: #212121;
+  --background-dark: #161616;
   --background-light: #424242;
   --highlight: #00bbff;
   --highlight-dark: #0083b3;
@@ -46,6 +47,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  min-height: 100%;
 }
 
 html {
@@ -61,8 +63,9 @@ body {
 }
 
 main {
-  margin: 0 auto;
-  max-width: var(--max-width);
+  margin: 3rem auto;
+  width: var(--max-width);
+  max-width: 100%;
 }
 
 h1,
@@ -120,5 +123,5 @@ em {
 
 small {
   font-size: 0.9rem;
-  color: var(--foreground--dark);
+  color: var(--foreground-dark);
 }

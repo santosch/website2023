@@ -7,7 +7,7 @@
   padding-right: 1rem;
   flex: 0 0 var(--left-col-width);
   text-align: right;
-  color: var(--foreground--dark);
+  color: var(--foreground-dark);
   transition: 0.3s color;
   position: relative;
 
@@ -44,6 +44,6 @@
 }
 
 .description {
-  color: var(--foreground--dark);
+  color: var(--foreground-dark);
   line-height: 1.4;
 }

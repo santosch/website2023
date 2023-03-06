@@ -1,10 +1,12 @@
 import './globals.scss'
 import Hero from "@santosch/components/Hero/Hero";
+import Footer from "@santosch/components/Footer/Footer";
+import type {ReactNode} from "react";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
     <html lang="de">
@@ -12,6 +14,7 @@ export default function RootLayout({
       <body>
         <Hero/>
         {children}
+        <Footer />
       </body>
     </html>
   )

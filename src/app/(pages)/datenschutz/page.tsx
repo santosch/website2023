@@ -10,7 +10,7 @@ export default function Datenschutz(): React.ReactNode {
             </h2>
 
             <p className={styles.lead}>
-                Ich freuen mich sehr über Ihr Interesse an mir und meiner Website. Datenschutz hat einen
+                Ich freue mich sehr über Ihr Interesse an mir und meiner Website. Datenschutz hat einen
                 besonders
                 hohen Stellenwert für mich. Eine Nutzung meiner Internetseiten ist grundsätzlich ohne jede
                 Angabe
