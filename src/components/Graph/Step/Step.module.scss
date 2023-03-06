@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+}
+
+.date {
+  flex: 0 0 var(--left-col-width);
+  text-align: right;
+  color: var(--foreground--dark);
+  transition: 0.3s color;
+
+  &__highlighted {
+    color: var(--step-color);
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+}

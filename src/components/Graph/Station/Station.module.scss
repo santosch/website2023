@@ -3,7 +3,8 @@
 }
 
 .left {
-  flex: 0 0 200px;
+  flex: 0 0 var(--left-col-width);
+  text-align: right;
 }
 
 .image {

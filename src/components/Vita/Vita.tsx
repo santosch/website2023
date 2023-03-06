@@ -4,15 +4,8 @@ import styles from './Vita.module.scss'
 import Entry from "@santosch/components/Graph/Entry/Entry";
 import Graph from "@santosch/components/Graph/Graph";
 import Line from "@santosch/components/Graph/Line/Line";
+import {COLORS} from './vitaColors';
 
-const COLORS = {
-    DEFAULT: '#00bbff',
-    SCHOOL: '#c8d28b',
-    ISAN: '#0097ab',
-    HSA: '#ff9800',
-    CREA: '#ddde3a',
-    CHECK: '#084085',
-} as const;
 
 export default function Vita(): JSX.Element {
 
