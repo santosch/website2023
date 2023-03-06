@@ -8,17 +8,6 @@ export default function IsanFounding(): JSX.Element {
             color={COLORS.ISAN}
             date="04/2010"
             title="Mitgründung (2 Gesellschafter)"
-        >
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-        </Step>
+        />
     );
 }

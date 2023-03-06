@@ -10,13 +10,13 @@ export default function Check24Senior(): JSX.Element {
             title="Senior Softwareentwickler"
         >
             <p>
-                Einführung von React und Redux (+ Redux-Toolkit) sowie TypeScript im Frontend-Projekt,
-                Refactoring von Legacy-Codebases, Erarbeiten von Best Practices,
-                Erweiterung von Tooling, Logauswertung, Priority-Fixes.
+                Einführung von React und Redux (+ Redux-Toolkit) sowie TypeScript im Frontend-Projekt;
+                Refactoring von Legacy-Codebases; Erarbeitung von Best Practices;
+                Erweiterung von Tooling; Logauswertung; Priority-Fixes.
             </p>
             <p>
-                Fachliches Mentoring von Kollegen und Neustartern, Schulung von Kollegen in neuen Technologien,
-                Code Reviews, technische und konzeptionelle Beratung des Produktmanagements.
+                Fachliches Mentoring von Kolleg:innen und Neustartenden; Schulung von Kolleg:innen in neuen Technologien;
+                Code Reviews; technische und konzeptionelle Beratung des Produktmanagements.
             </p>
         </Step>
     );

@@ -9,16 +9,19 @@ export default function CreaWebdev(): JSX.Element {
             date="10/2015 - 02/2016"
             title="Webentwickler"
         >
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
+            <p>
+                Erstellung und Wartung von Webseiten, Landingpages und Shops basierend auf diversen CMS
+                (meist TYPO3, auch Magento, Shopware, Wordpress);
+                Umsetzung von responsiven Templates (individuell und mit Bootstrap);
+                Entwicklung von Individuellen TYPO3-Extensions sowie Custom-jQuery-Plugins.
+            </p>
+            <p>
+                Performanceoptimierung (PageSpeed); Umsetzung von OnPage-SEO-Maßnahmen;
+                Programmierung von Newslettertemplates (CleverReach, Emarsys); Einführung von GIT und SASS.
+            </p>
+            <p>
+
+            </p>
         </Step>
     );
 }

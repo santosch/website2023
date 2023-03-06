@@ -10,14 +10,16 @@ export default function Check24Teamlead(): JSX.Element {
             title="stellv. Teamleiter Softwareentwicklung"
         >
             <p>
-                Geteilte Personalverantwortung mit dem Teamlead (~12 MA),
-                Durchführen von Feedback- und Entwicklungsgesprächen,
+                Geteilte Personalverantwortung mit dem Teamlead (~12 MA);
+                Durchführung von Feedback- und Entwicklungsgesprächen;
                 fachliches und persönliches Mentoring.
-                Sichten von Bewerbungen, Durchführen von Telefon/Videointerviews sowie Bewerbertagen.
+            </p>
+            <p>
+                Sichtung von Bewerbungen; Durchführung von Telefon-/Videointerviews sowie Bewerbertagen.
             </p>
             <p>
                 Beratung des Produktmanagements und der Geschäftsführung bzgl. Themenpriorisierung und
-                IT-Prozessoptimierung, teamübergreifende technische Konzeption und Koordination.
+                IT&#8209;Prozessoptimierung; teamübergreifende technische Konzeption und Koordination.
             </p>
         </Step>
     );

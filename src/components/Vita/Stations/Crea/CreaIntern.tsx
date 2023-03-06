@@ -8,17 +8,6 @@ export default function CreaIntern(): JSX.Element {
             color={COLORS.CREA}
             date="09/2013 - 02/2014"
             title="Praktikum im Rahmen des Praxissemesters"
-        >
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-        </Step>
+        />
     );
 }

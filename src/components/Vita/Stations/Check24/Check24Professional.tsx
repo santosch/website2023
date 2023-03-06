@@ -14,7 +14,7 @@ export default function Check24Professional(): JSX.Element {
                 SCSS, Javascript/jQuery sowie Einführung des ersten Client-Side-Renderings mit Knockout.JS.
             </p>
             <p>
-                Testing mit PHPUnit und Karma/Jasmine, Durchführung von Code Reviews.
+                Testing mit PHPUnit und Karma/Jasmine; Durchführung von Code Reviews.
             </p>
         </Step>
     );
