@@ -1,7 +1,3 @@
-$lineWidth: 4px;
-$offset: $lineWidth / 2;
-$eventDiameter: 30px;
-
 .lineContainer {
   position: relative;
   width: 100%;
@@ -11,8 +7,8 @@ $eventDiameter: 30px;
   position: absolute;
   top: 0;
   bottom: 0;
-  width: $lineWidth;
-  left: calc(50% - $offset);
+  width: var(--line-width);
+  left: calc(50% - var(--half-line-width));
   background-color: var(--highlight);
 }
 
@@ -20,39 +16,39 @@ $eventDiameter: 30px;
   position: absolute;
   left: 0;
   right: 0;
-  height: $lineWidth;
-  top: calc(50% - $offset);
+  height: var(--line-width);
+  top: calc(50% - var(--half-line-width));
   z-index: 1;
   background-color: var(--highlight);
 }
 
 .curve {
   position: absolute;
-  top: - $offset;
-  left: - $offset;
-  bottom: - $offset;
-  right: - $offset;
+  top: calc(-1 * var(--half-line-width));
+  left: calc(-1 * var(--half-line-width));
+  bottom: calc(-1 * var(--half-line-width));
+  right: calc(-1 * var(--half-line-width));
   z-index: 1;
   border-radius: 50%;
   border-style: solid;
-  border-width: $lineWidth;
+  border-width: var(--line-width);
   border-color: transparent;
   border-left-color: var(--highlight);
 
   &__br {
-    transform: translate(calc(50% - #{$offset}), calc(50% - #{$offset})) rotate(45deg);
+    transform: translate(calc(50% - var(--half-line-width)), calc(50% - var(--half-line-width))) rotate(45deg);
   }
 
   &__bl {
-    transform: translate(calc(-50% + #{$offset}), calc(50% - #{$offset})) rotate(135deg);
+    transform: translate(calc(-50% + var(--half-line-width)), calc(50% - var(--half-line-width))) rotate(135deg);
   }
 
   &__tl {
-    transform: translate(calc(-50% + #{$offset}), calc(-50% + #{$offset})) rotate(225deg);
+    transform: translate(calc(-50% + var(--half-line-width)), calc(-50% + var(--half-line-width))) rotate(225deg);
   }
 
   &__tr {
-    transform: translate(calc(50% - #{$offset}), calc(-50% + #{$offset})) rotate(315deg);
+    transform: translate(calc(50% - var(--half-line-width)), calc(-50% + var(--half-line-width))) rotate(315deg);
   }
 }
 
@@ -60,16 +56,16 @@ $eventDiameter: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: $eventDiameter;
-  height: $eventDiameter;
+  width: var(--graph-event-diameter);
+  height: var(--graph-event-diameter);
   transform: translate(-50%, -50%);
-  border: $lineWidth / 2 solid var(--highlight);
+  border: var(--half-line-width) solid var(--highlight);
   border-radius: 50%;
   z-index: 2;
   background-color: var(--background);
   transition: 0.3s border-width;
 
   &__highlighted {
-    border-width: $eventDiameter / 2;
+    border-width: calc(var(--graph-event-diameter) / 2);
   }
 }

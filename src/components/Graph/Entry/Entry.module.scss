@@ -1,13 +1,11 @@
-$slotWidth: 40px;
-
 .entry {
   display: flex;
 }
 
 .slot {
-  flex: 0 0 $slotWidth;
-  width: $slotWidth;
-  min-height: $slotWidth;
+  flex: 0 0 var(--graph-slot-width);
+  width: var(--graph-slot-width);
+  min-height: var(--graph-slot-width);
   display: flex; // ensure content has full height
 }
 
@@ -16,6 +14,6 @@ $slotWidth: 40px;
   min-width: 0; // allow it to shrink
 
   &__spaceBefore {
-    padding-top: $slotWidth;
+    padding-top: var(--graph-slot-width);
   }
 }

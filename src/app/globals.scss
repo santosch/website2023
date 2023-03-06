@@ -27,8 +27,13 @@
   --highlight: #00bbff;
   --highlight-dark: #0083b3;
 
-  --border: 4px solid var(--highlight);
+  --line-width: 4px;
+  --half-line-width: calc(var(--line-width) / 2);
+  --border: var(--line-width) solid var(--highlight);
+
   --left-col-width: 200px;
+  --graph-slot-width: 40px;
+  --graph-event-diameter: calc(0.75 * var(--graph-slot-width));
 }
 
 * {
