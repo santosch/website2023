@@ -3,15 +3,17 @@ import styles from "./Step.module.scss"
 import classNames from "classnames";
 import useHighlight from "../useHighlight";
 
-export default function Station(
+export default function Step(
     {
         children,
         date,
+        title,
         color,
         eventKey
     }: {
         children?: ReactNode,
         date?: ReactNode,
+        title?: ReactNode,
         color?: string,
         eventKey: string
 
@@ -34,6 +36,9 @@ export default function Station(
                 {date}
             </div>
             <div className={styles.content}>
+                <h5 className={styles.title}>
+                    {title}
+                </h5>
                 {children}
             </div>
         </div>
