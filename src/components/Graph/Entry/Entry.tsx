@@ -1,5 +1,6 @@
 import styles from './Entry.module.scss';
 import {ReactNode} from "react";
+import classNames from "classnames";
 
 export default function Entry(
     {
@@ -7,13 +8,15 @@ export default function Entry(
         s2,
         s3,
         s4,
-        children
+        children,
+        spaceBefore,
     }: {
         s1?: ReactNode;
         s2?: ReactNode;
         s3?: ReactNode;
         s4?: ReactNode;
         children?: ReactNode;
+        spaceBefore?: boolean;
     }
 ): JSX.Element {
     return (
@@ -30,7 +33,12 @@ export default function Entry(
             <div className={styles.slot}>
                 {s4}
             </div>
-            <div className={styles.content}>
+            <div className={classNames(
+                styles.content,
+                {
+                    [styles.content__spaceBefore]: spaceBefore,
+                }
+            )}>
                 {children}
             </div>
         </div>

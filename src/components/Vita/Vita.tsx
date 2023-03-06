@@ -47,6 +47,7 @@ export default function Vita(): JSX.Element {
                 <Entry
                     s1={<Line color={COLORS.DEFAULT} event="isan" />}
                     s4={<Line color={COLORS.CHECK}/>}
+                    spaceBefore={true}
                 >
                     <Check24Teamlead />
                 </Entry>
@@ -69,6 +70,7 @@ export default function Vita(): JSX.Element {
                     s1={<Line color={COLORS.DEFAULT} />}
                     s3={<Line color={COLORS.ISAN} />}
                     s4={<Line color={COLORS.CHECK} event="check-professional"/>}
+                    spaceBefore={true}
                 >
                     <Check24Professional />
                 </Entry>
@@ -103,6 +105,7 @@ export default function Vita(): JSX.Element {
                     s1={<Line color={COLORS.DEFAULT} event="hsa" />}
                     s3={<Line color={COLORS.ISAN}/>}
                     s4={<Line color={COLORS.CREA}/>}
+                    spaceBefore={true}
                 >
                     <CreaFreelancer />
                 </Entry>
@@ -125,6 +128,7 @@ export default function Vita(): JSX.Element {
                     s2={<Line color={COLORS.HSA} event="hsa-thesis" />}
                     s3={<Line color={COLORS.ISAN}/>}
                     s4={<Line color={COLORS.CREA}/>}
+                    spaceBefore={true}
                 >
                     <Isan />
                 </Entry>
@@ -134,6 +138,7 @@ export default function Vita(): JSX.Element {
                     s2={<Line color={COLORS.HSA} />}
                     s3={<Line color={COLORS.ISAN}/>}
                     s4={<Line color={COLORS.CREA} event="crea-freelancer" />}
+                    spaceBefore={true}
                 >
                     <IsanDev />
                 </Entry>
@@ -142,6 +147,7 @@ export default function Vita(): JSX.Element {
                     s2={<Line color={COLORS.HSA} />}
                     s3={<Line color={COLORS.ISAN}/>}
                     s4={<Line color={COLORS.CREA} event="crea-intern" />}
+                    spaceBefore={true}
                 >
                     <IsanFounding />
                 </Entry>
@@ -154,7 +160,7 @@ export default function Vita(): JSX.Element {
 
                 <Entry
                     s1={<Line color={COLORS.DEFAULT} />}
-                    s2={<Line color={COLORS.HSA} event="hsa" />}
+                    s2={<Line color={COLORS.HSA} event="hsa-bachelor" />}
                     s3={<Line color={COLORS.ISAN} />}
                 >
                     <h2 className={styles.headline}>
@@ -208,6 +214,7 @@ export default function Vita(): JSX.Element {
                 <Entry
                     s1={<Line color={COLORS.DEFAULT} />}
                     s2={<Line color={COLORS.SCHOOL} event="school-elementary" />}
+                    spaceBefore={true}
                 >
                     <SchoolElementary />
                 </Entry>
