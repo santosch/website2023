@@ -17,6 +17,8 @@ import CreaFreelancer from "@santosch/components/Vita/Stations/Crea/CreaFreelanc
 import CreaIntern from "@santosch/components/Vita/Stations/Crea/CreaIntern";
 import IsanDev from "@santosch/components/Vita/Stations/Isan/IsanDev";
 import IsanFounding from "@santosch/components/Vita/Stations/Isan/IsanFounding";
+import HsaBachelor from "@santosch/components/Vita/Stations/Hsa/HsaBachelor";
+import HsaThesis from "@santosch/components/Vita/Stations/Hsa/HsaThesis";
 
 
 export default function Vita(): JSX.Element {
@@ -161,7 +163,7 @@ export default function Vita(): JSX.Element {
                     s1={<Line color={COLORS.DEFAULT} event="school"/>}
                     s3={<Line color={COLORS.ISAN} />}
                 >
-                    school end
+                    <HsaBachelor />
                 </Entry>
                 <Entry
                     s1={<Line color={COLORS.DEFAULT} tr={COLORS.SCHOOL} />}
@@ -173,7 +175,7 @@ export default function Vita(): JSX.Element {
                     s2={<Line color={COLORS.SCHOOL} event="school-abitur" />}
                     s3={<Line color={COLORS.ISAN} />}
                 >
-                    Abitur
+                    <HsaThesis />
                 </Entry>
 
 
