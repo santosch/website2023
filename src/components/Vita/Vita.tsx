@@ -5,20 +5,23 @@ import Entry from "@santosch/components/Graph/Entry/Entry";
 import Graph from "@santosch/components/Graph/Graph";
 import Line from "@santosch/components/Graph/Line/Line";
 import {COLORS} from './vitaColors';
-import Check24 from "@santosch/components/Vita/Stations/Check24/Check24";
-import Crea from "@santosch/components/Vita/Stations/Crea/Crea";
-import Hsa from "@santosch/components/Vita/Stations/Hsa/Hsa";
-import Isan from "@santosch/components/Vita/Stations/Isan/Isan";
-import Check24Teamlead from "@santosch/components/Vita/Stations/Check24/Check24Teamlead";
-import Check24Senior from "@santosch/components/Vita/Stations/Check24/Check24Senior";
-import Check24Professional from "@santosch/components/Vita/Stations/Check24/Check24Professional";
-import CreaWebdev from "@santosch/components/Vita/Stations/Crea/CreaWebdev";
-import CreaFreelancer from "@santosch/components/Vita/Stations/Crea/CreaFreelancer";
-import CreaIntern from "@santosch/components/Vita/Stations/Crea/CreaIntern";
-import IsanDev from "@santosch/components/Vita/Stations/Isan/IsanDev";
-import IsanFounding from "@santosch/components/Vita/Stations/Isan/IsanFounding";
-import HsaBachelor from "@santosch/components/Vita/Stations/Hsa/HsaBachelor";
-import HsaThesis from "@santosch/components/Vita/Stations/Hsa/HsaThesis";
+import Check24 from "./Stations/Check24/Check24";
+import Check24Teamlead from "./Stations/Check24/Check24Teamlead";
+import Check24Senior from "./Stations/Check24/Check24Senior";
+import Check24Professional from "./Stations/Check24/Check24Professional";
+import Crea from "./Stations/Crea/Crea";
+import CreaWebdev from "./Stations/Crea/CreaWebdev";
+import CreaFreelancer from "./Stations/Crea/CreaFreelancer";
+import CreaIntern from "./Stations/Crea/CreaIntern";
+import Isan from "./Stations/Isan/Isan";
+import IsanDev from "./Stations/Isan/IsanDev";
+import IsanFounding from "./Stations/Isan/IsanFounding";
+import Hsa from "./Stations/Hsa/Hsa";
+import HsaBachelor from "./Stations/Hsa/HsaBachelor";
+import HsaThesis from "./Stations/Hsa/HsaThesis";
+import SchoolGymnasium from "./Stations/School/SchoolGymnasium";
+import SchoolElementary from "./Stations/School/SchoolElementary";
+import Birth from "./Stations/Other/Birth";
 
 
 export default function Vita(): JSX.Element {
@@ -30,6 +33,9 @@ export default function Vita(): JSX.Element {
                     s1={<Line color={COLORS.DEFAULT} />}
                     s4={<Line color={COLORS.CHECK} />}
                 >
+                    <h2 className={styles.headline}>
+                        Beruflicher Werdegang
+                    </h2>
                 </Entry>
 
                 <Entry
@@ -151,6 +157,9 @@ export default function Vita(): JSX.Element {
                     s2={<Line color={COLORS.HSA} event="hsa" />}
                     s3={<Line color={COLORS.ISAN} />}
                 >
+                    <h2 className={styles.headline}>
+                        Schulische Ausbildung
+                    </h2>
                     <Hsa />
                 </Entry>
                 <Entry
@@ -172,7 +181,7 @@ export default function Vita(): JSX.Element {
                 />
                 <Entry
                     s1={<Line color={COLORS.DEFAULT} />}
-                    s2={<Line color={COLORS.SCHOOL} event="school-abitur" />}
+                    s2={<Line color={COLORS.SCHOOL} event="school-highschool" />}
                     s3={<Line color={COLORS.ISAN} />}
                 >
                     <HsaThesis />
@@ -183,9 +192,7 @@ export default function Vita(): JSX.Element {
                     s1={<Line color={COLORS.DEFAULT} />}
                     s2={<Line color={COLORS.SCHOOL} />}
                     s3={<Line color={COLORS.ISAN} event="isan" />}
-                >
-                    ISAN start
-                </Entry>
+                />
                 <Entry
                     s1={<Line color={COLORS.DEFAULT} br={COLORS.ISAN} />}
                     s2={<Line color={COLORS.SCHOOL} x={COLORS.ISAN} />}
@@ -196,13 +203,13 @@ export default function Vita(): JSX.Element {
                     s1={<Line color={COLORS.DEFAULT} />}
                     s2={<Line color={COLORS.SCHOOL} event="school-highschool" />}
                 >
-                    Gymnasium
+                    <SchoolGymnasium />
                 </Entry>
                 <Entry
                     s1={<Line color={COLORS.DEFAULT} />}
                     s2={<Line color={COLORS.SCHOOL} event="school-elementary" />}
                 >
-                    Grundschule
+                    <SchoolElementary />
                 </Entry>
 
                 <Entry
@@ -212,7 +219,7 @@ export default function Vita(): JSX.Element {
                 <Entry
                     s1={<Line color={COLORS.DEFAULT} event="birth" />}
                 >
-                    Geburt
+                    <Birth />
                 </Entry>
             </Graph>
         </div>

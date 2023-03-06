@@ -36,9 +36,11 @@ export default function Step(
                 {date}
             </div>
             <div className={styles.content}>
-                <h5 className={styles.title}>
-                    {title}
-                </h5>
+                {title &&
+                    <h5 className={styles.title}>
+                        {title}
+                    </h5>
+                }
                 {children}
             </div>
         </div>
