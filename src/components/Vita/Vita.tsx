@@ -22,6 +22,7 @@ import HsaThesis from "./Stations/Hsa/HsaThesis";
 import SchoolGymnasium from "./Stations/School/SchoolGymnasium";
 import SchoolElementary from "./Stations/School/SchoolElementary";
 import Birth from "./Stations/Other/Birth";
+import School from "@santosch/components/Vita/Stations/School/School";
 
 
 export default function Vita(): JSX.Element {
@@ -199,7 +200,10 @@ export default function Vita(): JSX.Element {
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.SCHOOL} />}
                         s3={<Line color={COLORS.ISAN} event="isan" />}
-                    />
+                        spaceBefore={true}
+                    >
+                        <School />
+                    </Entry>
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} br={COLORS.ISAN} />}
                         s2={<Line color={COLORS.SCHOOL} x={COLORS.ISAN} />}
