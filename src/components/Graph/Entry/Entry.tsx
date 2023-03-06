@@ -20,7 +20,12 @@ export default function Entry(
     }
 ): JSX.Element {
     return (
-        <div className={styles.entry}>
+        <div className={classNames(
+            styles.entry,
+            {
+                [styles.entry__empty]: !children
+            }
+        )}>
             <div className={styles.slot}>
                 {s1}
             </div>

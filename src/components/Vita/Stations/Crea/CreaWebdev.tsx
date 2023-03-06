@@ -13,7 +13,7 @@ export default function CreaWebdev(): JSX.Element {
                 Erstellung und Wartung von Webseiten, Landingpages und Shops basierend auf diversen CMS
                 (meist TYPO3, auch Magento, Shopware, Wordpress);
                 Umsetzung von responsiven Templates (individuell und mit Bootstrap);
-                Entwicklung von Individuellen TYPO3-Extensions sowie Custom-jQuery-Plugins.
+                Entwicklung von individuellen TYPO3-Extensions sowie Custom-jQuery-Plugins.
             </p>
             <p>
                 Performanceoptimierung (PageSpeed); Umsetzung von OnPage-SEO-Maßnahmen;

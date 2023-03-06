@@ -1,5 +1,11 @@
 .entry {
   display: flex;
+
+  &__empty {
+    @media print {
+      display: none;
+    }
+  }
 }
 
 .slot {
@@ -7,6 +13,10 @@
   width: var(--graph-slot-width);
   min-height: var(--graph-slot-width);
   display: flex; // ensure content has full height
+
+  @media print {
+    display: none;
+  }
 }
 
 .content {
@@ -14,6 +24,10 @@
   min-width: 0; // allow it to shrink
 
   &__spaceBefore {
+    padding-top: var(--graph-slot-width);
+  }
+
+  @media print {
     padding-top: var(--graph-slot-width);
   }
 }

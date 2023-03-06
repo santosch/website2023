@@ -3,6 +3,8 @@
 }
 
 .date {
+  line-height: 1.3;
+  padding-right: 1rem;
   flex: 0 0 var(--left-col-width);
   text-align: right;
   color: var(--foreground--dark);
@@ -15,4 +17,15 @@
 
 .content {
   flex: 1 1 auto;
+  font-size: 0.95rem;
+}
+
+.title {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.description {
+  color: var(--foreground--dark);
+  line-height: 1.4;
 }

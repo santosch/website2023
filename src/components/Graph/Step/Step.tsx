@@ -41,7 +41,11 @@ export default function Step(
                         {title}
                     </h5>
                 }
-                {children}
+                {children &&
+                    <div className={styles.description}>
+                        {children}
+                    </div>
+                }
             </div>
         </div>
     );
