@@ -9,16 +9,16 @@ export default function Check24Teamlead(): JSX.Element {
             date="seit 10/2022"
             title="stellv. Teamleiter Softwareentwicklung"
         >
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
+            <p>
+                Geteilte Personalverantwortung mit dem Teamlead (~12 MA),
+                Durchführen von Feedback- und Entwicklungsgesprächen,
+                fachliches und persönliches Mentoring.
+                Sichten von Bewerbungen, Durchführen von Telefon/Videointerviews sowie Bewerbertagen.
+            </p>
+            <p>
+                Beratung des Produktmanagements und der Geschäftsführung bzgl. Themenpriorisierung und
+                IT-Prozessoptimierung, teamübergreifende technische Konzeption und Koordination.
+            </p>
         </Step>
     );
 }

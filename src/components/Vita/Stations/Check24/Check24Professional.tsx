@@ -9,16 +9,13 @@ export default function Check24Professional(): JSX.Element {
             date="02/2016 - 03/2019"
             title="Softwareentwickler"
         >
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
-            Lorem ipsum dolor sit amet
+            <p>
+                Weiterentwicklung der Frontend-Applikation des Mietwagenvergleichs basierend auf PHP (Zend&nbsp;Framework&nbsp;2/3&nbsp;/&nbsp;Laminas),
+                SCSS, Javascript/jQuery sowie Einführung des ersten Client-Side-Renderings mit Knockout.JS.
+            </p>
+            <p>
+                Testing mit PHPUnit und Karma/Jasmine, Durchführung von Code Reviews.
+            </p>
         </Step>
     );
 }
