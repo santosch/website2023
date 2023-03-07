@@ -1,6 +1,11 @@
 .container {
   background-color: var(--background-dark);
   border-top: 1px solid var(--highlight-dark);
+
+  @media print {
+    break-inside: avoid;
+    margin-top: 3rem;
+  }
 }
 
 .inner {
@@ -11,10 +16,18 @@
   border-left: var(--border);
   position: relative;
   display: flex;
+
+  @media print {
+    border-left: none;
+  }
 }
 
 .nav {
   flex: 0 0 auto;
+
+  @media print {
+    display: none;
+  }
 }
 
 .link {
