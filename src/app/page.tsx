@@ -20,7 +20,7 @@ export default function Home() {
                 <Vita/>
             </main>
             <Teaser
-                videoKey="typing"
+                videoKey="buttons"
                 quote={
                     <>
                         In software development, “perfect” is a verb, not an adjective.
