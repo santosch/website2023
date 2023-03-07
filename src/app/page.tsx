@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <Teaser
-                videoKey="typing"
+                videoKey="buttons"
                 quote={
                     <>
                         Real quality means making sure that people are proud of the code they write,
@@ -20,7 +20,7 @@ export default function Home() {
                 <Vita/>
             </main>
             <Teaser
-                videoKey="buttons"
+                videoKey="typing"
                 quote={
                     <>
                         In software development, “perfect” is a verb, not an adjective.
