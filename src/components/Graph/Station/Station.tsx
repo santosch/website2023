@@ -41,8 +41,8 @@ export default function Station(
                     )}
                 />
             </div>
-            <div className={styles.imageContainer}>
-                {image &&
+            {image &&
+                <div className={styles.imageContainer}>
                     <Image
                         src={image}
                         alt=""
@@ -50,8 +50,8 @@ export default function Station(
                         width={50}
                         height={50}
                     />
-                }
-            </div>
+                </div>
+            }
         </div>
     );
 }
