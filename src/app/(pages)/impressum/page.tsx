@@ -92,7 +92,13 @@ export default function Impressum(): React.ReactNode {
 
             <Card title="Bildquellen">
                 <p>
+                    Bild Startseite: &quot;Möwe über Bodensee&quot; von Sebastian Antosch
+                </p>
+                <p>
                     Video Startseite: &quot;Black Keys&quot; von coverr.co | <a href="https://coverr.co/license">https://coverr.co/license</a>
+                </p>
+                <p>
+                    Video Startseite: &quot;Pushing buttons on a keyboard&quot; von coverr.co | <a href="https://coverr.co/license">https://coverr.co/license</a>
                 </p>
             </Card>
         </>
