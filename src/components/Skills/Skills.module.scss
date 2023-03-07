@@ -1,8 +1,15 @@
 
+
+.container {
+  border-left: var(--border);
+}
+
 .row {
   display: flex;
 }
 
-.column {
-  flex: 0 0 33%;
+.chartContainer {
+  padding: 2rem 0;
+  flex: 0 0 var(--chart-diameter);
+  margin-left: calc(-1 * (var(--chart-diameter) / 2) - var(--line-width));
 }

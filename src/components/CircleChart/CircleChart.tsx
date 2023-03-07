@@ -22,13 +22,18 @@ const CircleChart = memo(function CircleChart(
             options={{
                 chart: {
                     height,
-                    type: 'radialBar'
+                    width: height,
+                    type: 'radialBar',
+                    sparkline: {
+                        enabled: true,
+                    },
+
                 },
                 plotOptions: {
                     radialBar: {
                         hollow: {
                             margin: 0,
-                            size: '70%',
+                            size: '80%',
                             background: '#212121',
                             image: undefined,
                             imageOffsetX: 0,
@@ -44,14 +49,14 @@ const CircleChart = memo(function CircleChart(
                         },
                         track: {
                             background: '#424242',
-                            strokeWidth: '90%',
+                            strokeWidth: '100%',
                             margin: 0, // margin is in pixels
                             dropShadow: {
                                 enabled: true,
-                                top: -3,
+                                top: 0,
                                 left: 0,
                                 blur: 4,
-                                opacity: 0.4
+                                opacity: 0.25
                             }
                         },
                         dataLabels: {
@@ -59,8 +64,6 @@ const CircleChart = memo(function CircleChart(
                                 show: true,
                                 color: '#eee',
                                 fontSize: '0.8rem',
-                                // fontFamily: '"Roboto Slab", "Times New Roman", Times, serif',
-                                // fontFamily: 'Roboto, "Times New Roman", Times, serif',
                                 offsetY: 2,
                             },
                             value: {
@@ -78,15 +81,13 @@ const CircleChart = memo(function CircleChart(
                         shade: 'dark',
                         type: 'horizontal',
                         shadeIntensity: 0.5,
-                        gradientToColors: ['#abe5a1'],
+                        // no gradient for values < 50 since it starts in the middle then
+                        gradientToColors: [value < 50 ? '#00bbff' : '#abe5a1'],
                         inverseColors: true,
                         opacityFrom: 1,
                         opacityTo: 1,
-                        stops: [0, 100]
+                        stops: [0, 50]
                     }
-                },
-                stroke: {
-                    lineCap: 'round'
                 },
                 labels: [label.toUpperCase()],
             }}

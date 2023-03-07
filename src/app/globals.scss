@@ -36,6 +36,8 @@
   --graph-slot-width: 40px;
   --graph-event-diameter: calc(0.75 * var(--graph-slot-width));
 
+  --chart-diameter: 120px;
+
   @media print {
     --graph-slot-width: 15px;
   }
