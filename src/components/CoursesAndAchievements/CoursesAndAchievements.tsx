@@ -5,6 +5,9 @@ import Entry from "@santosch/components/Graph/Entry/Entry";
 import Graph from "@santosch/components/Graph/Graph";
 import Line from "@santosch/components/Graph/Line/Line";
 import {COLORS} from './coursesAndAchievementsColors';
+import Softskill from "@santosch/components/CoursesAndAchievements/Stations/Softskill/Softskill";
+import Hardskill from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/Hardskill";
+import Achievements from "@santosch/components/CoursesAndAchievements/Stations/Achievements/Achievements";
 
 
 
@@ -18,9 +21,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} event="soft" />}
                     >
-                        <h2 className={styles.headline}>
-                            Weiterbildung
-                        </h2>
+                        <Softskill />
                     </Entry>
 
                     <Entry
@@ -63,6 +64,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.SOFTSKILL} event="soft-intercultural" />}
+                        spaceBefore={true}
                     >
                         FK Programm 2022
                     </Entry>
@@ -70,6 +72,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.SOFTSKILL} event="soft-fk-programm" />}
+                        spaceBefore={true}
                     >
                         FK basis 2021
                     </Entry>
@@ -77,6 +80,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.SOFTSKILL} event="soft-fk-basis" />}
+                        spaceBefore={true}
                     >
                         Insights 2021
                     </Entry>
@@ -84,6 +88,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.SOFTSKILL} event="soft-insights" />}
+                        spaceBefore={true}
                     >
                         Konflikte 2020
                     </Entry>
@@ -91,7 +96,9 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.SOFTSKILL} event="soft-conflicts" />}
-                    />
+                    >
+                        <Hardskill />
+                    </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} br={COLORS.SOFTSKILL} />}
@@ -100,7 +107,9 @@ export default function CoursesAndAchievements(): JSX.Element {
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} event="hard" />}
-                    />
+                    >
+                        MySQL
+                    </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} tr={COLORS.HARDSKILL} />}
@@ -110,7 +119,9 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} event="hard-mysql" />}
-                    />
+                    >
+                        PHPUnit
+                    </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} tr={COLORS.ACHIEVEMENT} />}
@@ -121,12 +132,17 @@ export default function CoursesAndAchievements(): JSX.Element {
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} event="hard-phpunit" />}
                         s3={<Line color={COLORS.ACHIEVEMENT} />}
-                    />
+                    >
+                        ZF2
+                    </Entry>
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} />}
                         s3={<Line color={COLORS.ACHIEVEMENT} event="achievement-excellence-programm" />}
-                    />
+                        spaceBefore={true}
+                    >
+                        <Achievements />
+                    </Entry>
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} br={COLORS.ACHIEVEMENT} />}
                         s2={<Line color={COLORS.HARDSKILL} x={COLORS.ACHIEVEMENT} />}
@@ -137,12 +153,20 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} event="hard-zf2" />}
-                    />
+                    >
+                        Feature-Challenge
+                    </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} br={COLORS.HARDSKILL} />}
                         s2={<Line tl={COLORS.HARDSKILL} />}
                     />
+
+                    <Entry
+                        s1={<Line color={COLORS.DEFAULT} />}
+                    >
+                        Excellence Programm
+                    </Entry>
 
                 </Graph>
             </div>
