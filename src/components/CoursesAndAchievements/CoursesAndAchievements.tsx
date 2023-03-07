@@ -5,28 +5,21 @@ import Entry from "@santosch/components/Graph/Entry/Entry";
 import Graph from "@santosch/components/Graph/Graph";
 import Line from "@santosch/components/Graph/Line/Line";
 import {COLORS} from './coursesAndAchievementsColors';
-import Softskill from "@santosch/components/CoursesAndAchievements/Stations/Softskill/Softskill";
-import Hardskill from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/Hardskill";
-import Achievements from "@santosch/components/CoursesAndAchievements/Stations/Achievements/Achievements";
-import AchievementFeatureChallenge
-    from "@santosch/components/CoursesAndAchievements/Stations/Achievements/AchievementFeatureChallenge";
-import AchievementExcellenceProgram
-    from "@santosch/components/CoursesAndAchievements/Stations/Achievements/AchievementExcellenceProgram";
-import HardskillZf2 from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillZf2";
-import HardskillMySqlPerformance
-    from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillMySqlPerformance";
-import HardskillPhpUnit from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillPhpUnit";
-import SoftskillRadicalCandor
-    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillRadicalCandor";
-import SoftskillRecruiting from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillRecruiting";
-import SoftskillIntercultural
-    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillIntercultural";
-import SoftskillILeadershipProgram
-    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillILeadershipProgram";
-import SoftskillILeadershipBasics
-    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillILeadershipBasics";
-import SoftskillIInsights from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillIInsights";
-import SoftskillConflicts from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillConflicts";
+import Softskill from "./Stations/Softskill/Softskill";
+import Hardskill from "./Stations/Hardskill/Hardskill";
+import Achievements from "./Stations/Achievements/Achievements";
+import AchievementFeatureChallenge from "./Stations/Achievements/AchievementFeatureChallenge";
+import AchievementExcellenceProgram from "./Stations/Achievements/AchievementExcellenceProgram";
+import HardskillZf2 from "./Stations/Hardskill/HardskillZf2";
+import HardskillMySqlPerformance from "./Stations/Hardskill/HardskillMySqlPerformance";
+import HardskillPhpUnit from "./Stations/Hardskill/HardskillPhpUnit";
+import SoftskillRadicalCandor from "./Stations/Softskill/SoftskillRadicalCandor";
+import SoftskillRecruiting from "./Stations/Softskill/SoftskillRecruiting";
+import SoftskillIntercultural from "./Stations/Softskill/SoftskillIntercultural";
+import SoftskillILeadershipProgram from "./Stations/Softskill/SoftskillILeadershipProgram";
+import SoftskillILeadershipBasics from "./Stations/Softskill/SoftskillILeadershipBasics";
+import SoftskillIInsights from "./Stations/Softskill/SoftskillIInsights";
+import SoftskillConflicts from "./Stations/Softskill/SoftskillConflicts";
 
 
 
