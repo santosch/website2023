@@ -1,18 +1,29 @@
 import styles from "./Teaser.module.scss";
 import {FaEnvelope, FaGithub, FaXing} from "react-icons/fa";
+import type {ReactElement} from "react";
 
-export default function Teaser(): JSX.Element {
+export default function Teaser(
+    {
+        videoKey,
+        quote,
+        author,
+    }: {
+        videoKey: string,
+        quote: ReactElement,
+        author: string,
+    }
+): JSX.Element {
     return (
         <div className={styles.teaser}>
 
-            <video poster="/assets/video/typing.jpg"
-                   className="headerVideo"
-                   autoPlay={true}
-                   loop={true}
-                   muted={true}
+            <video
+                poster={`/assets/video/${videoKey}.jpg`}
+                autoPlay={true}
+                loop={true}
+                muted={true}
             >
                 <source
-                    src="/assets/video/typing.mp4"
+                    src={`/assets/video/${videoKey}.mp4`}
                     type="video/mp4"
                 />
             </video>
@@ -50,11 +61,10 @@ export default function Teaser(): JSX.Element {
 
                     <div className={styles.quote}>
                         <h3 className={styles.quoteText}>
-                            Real quality means making sure that people are proud of the code they write,
-                            that they&apos;re involved and taking it personally.
+                            {quote}
                         </h3>
                         <div className={styles.quoteAuthor}>
-                            ~ Linus Torvalds, 2008
+                            ~ {author}
                         </div>
                     </div>
 
