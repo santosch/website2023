@@ -1,17 +1,16 @@
 .container {
   background-color: var(--background-dark);
-  border-top: var(--line-width) solid var(--highlight-dark);
+  border-top: 1px solid var(--highlight-dark);
 }
 
 .inner {
-  margin: calc(-1 * var(--line-width)) auto 0 auto;
+  margin: 0 auto;
   width: var(--max-width);
   max-width: 100%;
   min-height: 100px;
   border-left: var(--border);
   position: relative;
   display: flex;
-  padding-top: var(--line-width);
 }
 
 .nav {

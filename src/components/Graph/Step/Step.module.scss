@@ -1,5 +1,9 @@
 .container {
   display: flex;
+
+  // small hack to fill the gaps between steps and prevent the hover animations from going nuts
+  margin-top: calc(-1 * var(--graph-slot-width));
+  padding-top: var(--graph-slot-width);
 }
 
 .date {
