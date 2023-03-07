@@ -8,6 +8,14 @@ import {COLORS} from './coursesAndAchievementsColors';
 import Softskill from "@santosch/components/CoursesAndAchievements/Stations/Softskill/Softskill";
 import Hardskill from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/Hardskill";
 import Achievements from "@santosch/components/CoursesAndAchievements/Stations/Achievements/Achievements";
+import AchievementFeatureChallenge
+    from "@santosch/components/CoursesAndAchievements/Stations/Achievements/AchievementFeatureChallenge";
+import AchievementExcellenceProgramm
+    from "@santosch/components/CoursesAndAchievements/Stations/Achievements/AchievementExcellenceProgramm";
+import HardskillZf2 from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillZf2";
+import HardskillMySqlPerformance
+    from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillMySqlPerformance";
+import HardskillPhpUnit from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillPhpUnit";
 
 
 
@@ -108,7 +116,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} event="hard" />}
                     >
-                        MySQL
+                        <HardskillMySqlPerformance />
                     </Entry>
 
                     <Entry
@@ -120,7 +128,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} event="hard-mysql" />}
                     >
-                        PHPUnit
+                        <HardskillPhpUnit />
                     </Entry>
 
                     <Entry
@@ -133,7 +141,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                         s2={<Line color={COLORS.HARDSKILL} event="hard-phpunit" />}
                         s3={<Line color={COLORS.ACHIEVEMENT} />}
                     >
-                        ZF2
+                        <HardskillZf2 />
                     </Entry>
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
@@ -154,7 +162,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} event="hard-zf2" />}
                     >
-                        Feature-Challenge
+                        <AchievementFeatureChallenge />
                     </Entry>
 
                     <Entry
@@ -165,7 +173,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                     >
-                        Excellence Programm
+                        <AchievementExcellenceProgramm />
                     </Entry>
 
                 </Graph>
