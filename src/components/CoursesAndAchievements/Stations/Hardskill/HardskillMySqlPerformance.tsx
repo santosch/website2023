@@ -8,10 +8,6 @@ export default function HardskillMySqlPerformance(): JSX.Element {
             color={COLORS.HARDSKILL}
             date="06/2018"
             title="MySQL Performance Tuning"
-        >
-            <p>
-                2 Tage
-            </p>
-        </Step>
+        />
     );
 }

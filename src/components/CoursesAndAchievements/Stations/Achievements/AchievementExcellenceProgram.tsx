@@ -2,10 +2,10 @@ import {COLORS} from "../../coursesAndAchievementsColors";
 import Step from "@santosch/components/Graph/Step/Step";
 import Link from "next/link";
 
-export default function AchievementExcellenceProgramm(): JSX.Element {
+export default function AchievementExcellenceProgram(): JSX.Element {
     return (
         <Step
-            eventKey="achievement-excellence-programm"
+            eventKey="achievement-excellence-program"
             color={COLORS.ACHIEVEMENT}
             date="2017"
             title="CHECK24 Excellence Programm"

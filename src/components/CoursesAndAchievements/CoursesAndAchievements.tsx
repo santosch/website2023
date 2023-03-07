@@ -10,12 +10,23 @@ import Hardskill from "@santosch/components/CoursesAndAchievements/Stations/Hard
 import Achievements from "@santosch/components/CoursesAndAchievements/Stations/Achievements/Achievements";
 import AchievementFeatureChallenge
     from "@santosch/components/CoursesAndAchievements/Stations/Achievements/AchievementFeatureChallenge";
-import AchievementExcellenceProgramm
-    from "@santosch/components/CoursesAndAchievements/Stations/Achievements/AchievementExcellenceProgramm";
+import AchievementExcellenceProgram
+    from "@santosch/components/CoursesAndAchievements/Stations/Achievements/AchievementExcellenceProgram";
 import HardskillZf2 from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillZf2";
 import HardskillMySqlPerformance
     from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillMySqlPerformance";
 import HardskillPhpUnit from "@santosch/components/CoursesAndAchievements/Stations/Hardskill/HardskillPhpUnit";
+import SoftskillRadicalCandor
+    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillRadicalCandor";
+import SoftskillRecruiting from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillRecruiting";
+import SoftskillIntercultural
+    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillIntercultural";
+import SoftskillILeadershipProgram
+    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillILeadershipProgram";
+import SoftskillILeadershipBasics
+    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillILeadershipBasics";
+import SoftskillIInsights from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillIInsights";
+import SoftskillConflicts from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillConflicts";
 
 
 
@@ -41,7 +52,23 @@ export default function CoursesAndAchievements(): JSX.Element {
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.SOFTSKILL} event="soft-radical-candor" />}
                     >
-                        Radical candor 2023
+                        <SoftskillRadicalCandor />
+                    </Entry>
+
+                    <Entry
+                        s1={<Line color={COLORS.DEFAULT} />}
+                        s2={<Line color={COLORS.SOFTSKILL} event="soft-intercultural" />}
+                        spaceBefore={true}
+                    >
+                        <SoftskillIntercultural />
+                    </Entry>
+
+                    <Entry
+                        s1={<Line color={COLORS.DEFAULT} />}
+                        s2={<Line color={COLORS.SOFTSKILL} event="soft-recruiting" />}
+                        spaceBefore={true}
+                    >
+                        <SoftskillRecruiting />
                     </Entry>
 
                     <Entry
@@ -54,7 +81,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                         s2={<Line color={COLORS.SOFTSKILL} />}
                         s3={<Line color={COLORS.ACHIEVEMENT} event="achievement-feature-challenge" />}
                     >
-                        Recruiting 2022
+                        <SoftskillILeadershipProgram />
                     </Entry>
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} br={COLORS.ACHIEVEMENT} />}
@@ -64,33 +91,9 @@ export default function CoursesAndAchievements(): JSX.Element {
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-recruiting" />}
+                        s2={<Line color={COLORS.SOFTSKILL} event="soft-leadership-program" />}
                     >
-                        Intercultural 2022
-                    </Entry>
-
-                    <Entry
-                        s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-intercultural" />}
-                        spaceBefore={true}
-                    >
-                        FK Programm 2022
-                    </Entry>
-
-                    <Entry
-                        s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-fk-programm" />}
-                        spaceBefore={true}
-                    >
-                        FK basis 2021
-                    </Entry>
-
-                    <Entry
-                        s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-fk-basis" />}
-                        spaceBefore={true}
-                    >
-                        Insights 2021
+                        <SoftskillIInsights />
                     </Entry>
 
                     <Entry
@@ -98,12 +101,21 @@ export default function CoursesAndAchievements(): JSX.Element {
                         s2={<Line color={COLORS.SOFTSKILL} event="soft-insights" />}
                         spaceBefore={true}
                     >
-                        Konflikte 2020
+                        <SoftskillILeadershipBasics />
+                    </Entry>
+
+                    <Entry
+                        s1={<Line color={COLORS.DEFAULT} />}
+                        s2={<Line color={COLORS.SOFTSKILL} event="soft-leadership-basics" />}
+                        spaceBefore={true}
+                    >
+                        <SoftskillConflicts />
                     </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.SOFTSKILL} event="soft-conflicts" />}
+                        spaceBefore={true}
                     >
                         <Hardskill />
                     </Entry>
@@ -146,7 +158,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} />}
-                        s3={<Line color={COLORS.ACHIEVEMENT} event="achievement-excellence-programm" />}
+                        s3={<Line color={COLORS.ACHIEVEMENT} event="achievement-excellence-program" />}
                         spaceBefore={true}
                     >
                         <Achievements />
@@ -173,7 +185,7 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                     >
-                        <AchievementExcellenceProgramm />
+                        <AchievementExcellenceProgram />
                     </Entry>
 
                 </Graph>
