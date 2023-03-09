@@ -8,7 +8,19 @@ export default function Home() {
     return (
         <>
             <main className={styles.main}>
-                <Skills />
+                <Skills
+                    title="Frontend"
+                    categories={{
+                        HTML: 90,
+                        CSS: 90,
+                        JS: 90,
+                        React: 88,
+                        Redux: 79,
+                        NextJS: 35,
+                        jQuery: 91,
+                        KnockoutJS: 89,
+                    }}
+                />
             </main>
             <Teaser
                 videoKey="buttons"

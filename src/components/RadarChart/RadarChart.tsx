@@ -1,6 +1,6 @@
 "use client"
 
-import {memo} from "react";
+import {memo, useCallback, useRef} from "react";
 import ReactApexChart from "react-apexcharts";
 
 const RadarChart = memo(function RadarChart(
@@ -8,10 +8,12 @@ const RadarChart = memo(function RadarChart(
         values,
         height,
         selected,
+        onSelect,
     }: {
         values: Record<string, number>,
         height: number,
-        selected?: string,
+        selected?: string | null,
+        onSelect?: (selected: string | null) => void,
     }
 ): JSX.Element {
 
@@ -20,6 +22,22 @@ const RadarChart = memo(function RadarChart(
             return (key === selected) ? override : def;
         });
     }
+
+    const lastSelected = useRef<string | null>(null);
+
+    const handleMousemove = useCallback(
+        (e: any) => {
+            const hoveredIndex = e.target?.getAttributeNode('rel')?.nodeValue ?? null;
+            const hoveredLabel = Object.keys(values)[hoveredIndex] ?? null;
+            if (hoveredLabel === lastSelected.current) {
+                return;
+            }
+
+            lastSelected.current = hoveredLabel;
+            onSelect?.(hoveredLabel);
+        },
+        [values, onSelect]
+    );
 
     return (
         <ReactApexChart
@@ -39,6 +57,10 @@ const RadarChart = memo(function RadarChart(
                     // sparkline: {
                     //     enabled: true,
                     // },
+                    events: {
+                        mouseMove: handleMousemove,
+
+                    },
                 },
                 xaxis: {
                     categories: Object.keys(values),
@@ -70,7 +92,7 @@ const RadarChart = memo(function RadarChart(
                     },
                 },
                 markers: {
-                    size: 4,
+                    size: 6,
                     colors: ['#00bbff'],
                     strokeColors: ['#00bbff'],
                     strokeWidth: 2,
