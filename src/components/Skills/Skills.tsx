@@ -4,6 +4,7 @@ import CircleChart from "@santosch/components/CircleChart/CircleChart";
 import styles from "./Skills.module.scss";
 import RadarChart from "@santosch/components/RadarChart/RadarChart";
 import {useState} from "react";
+import SkillKeyword from "@santosch/components/Skills/SkillKeyword/SkillKeyword";
 
 export default function Skills(
     {
@@ -36,6 +37,18 @@ export default function Skills(
                     selected={selected}
                     onSelect={setSelected}
                 />
+            </div>
+            <div className={styles.keywords}>
+                {Object.keys(categories).map((key) => {
+                    return (
+                        <SkillKeyword
+                            key={key}
+                            keyword={key}
+                            rating={categories[key]}
+                            onSelect={setSelected}
+                        />
+                    );
+                })}
             </div>
 
 
