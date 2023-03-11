@@ -6,12 +6,12 @@ import ReactApexChart from "react-apexcharts";
 const CircleChart = memo(function CircleChart(
     {
         value,
-        label,
         height,
+        centerBackground,
     }: {
         value: number,
-        label: string,
         height: number,
+        centerBackground: string,
     }
 ): JSX.Element {
     return (
@@ -34,7 +34,7 @@ const CircleChart = memo(function CircleChart(
                         hollow: {
                             margin: 0,
                             size: '80%',
-                            background: '#212121',
+                            background: centerBackground,
                             image: undefined,
                             imageOffsetX: 0,
                             imageOffsetY: 0,
@@ -61,10 +61,7 @@ const CircleChart = memo(function CircleChart(
                         },
                         dataLabels: {
                             name: {
-                                show: true,
-                                color: '#eee',
-                                fontSize: '0.8rem',
-                                offsetY: 2,
+                                show: false,
                             },
                             value: {
                                 show: false,
@@ -89,7 +86,6 @@ const CircleChart = memo(function CircleChart(
                         stops: [0, 50]
                     }
                 },
-                labels: [label.toUpperCase()],
             }}
         />
     );

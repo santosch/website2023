@@ -11,14 +11,49 @@ export default function Home() {
                 <Skills
                     title="Frontend"
                     categories={{
-                        HTML: 90,
-                        CSS: 90,
-                        JS: 90,
-                        React: 88,
-                        Redux: 79,
+                        HTML: 85,
+                        ['(S)CSS']: 85,
+                        JS: 95,
+                        React: 92,
+                        Redux: 87,
                         NextJS: 35,
-                        jQuery: 91,
-                        KnockoutJS: 89,
+                        Webpack: 60,
+                        jQuery: 80,
+                        KnockoutJS: 85,
+                    }}
+                />
+            </main>
+            <div className={styles.dark}>
+                <main className={styles.main}>
+                    <Skills
+                        title="Backend"
+                        categories={{
+                            PHP: 80,
+                            PHPUnit: 70,
+                            MySQL: 35,
+                            Laminas: 75,
+                            TYPO3: 60,
+                            Joomla: 55,
+                            Kirby: 60,
+                            NextJS: 35,
+                            NodeJS: 45,
+                        }}
+                        dark={true}
+                    />
+                </main>
+            </div>
+            <main className={styles.main}>
+                <Skills
+                    title="Tools"
+                    categories={{
+                        Git: 85,
+                        PHPStorm: 85,
+                        Bitbucket: 80,
+                        Jira: 70,
+                        Confluence: 65,
+                        Bamboo: 65,
+                        Illustrator: 40,
+                        Photoshop: 65,
                     }}
                 />
             </main>

@@ -24,7 +24,7 @@ export default function SkillKeyword(
 
     return (
         <span
-            style={{fontSize: 8 + (rating / 100) * 20 }}
+            style={{fontSize: 6 + (rating / 100) * 30 }}
             onMouseOver={onMouseover}
             onMouseOut={onMouseout}
             className={className}

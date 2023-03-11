@@ -76,6 +76,12 @@ const RadarChart = memo(function RadarChart(
                 },
                 yaxis: {
                     show: false,
+                    labels: {
+                        show: false,
+                    },
+                    min: 0,
+                    max: 100,
+                    tickAmount: 5,
                 },
                 dataLabels: {
                     enabled: false,
