@@ -112,6 +112,15 @@ export default function Impressum(): React.ReactNode {
                         https://coverr.co/license
                     </a>
                 </p>
+                <p>
+                    Bild Startseite: &quot;Umschläge&quot; von cottonbro studio via pexels.com | <a
+                    href="https://www.pexels.com/de-DE/lizenz/"
+                    target="blank"
+                    rel="nofollow"
+                >
+                    https://www.pexels.com/de-DE/lizenz/
+                </a>
+                </p>
             </Card>
         </>
     );

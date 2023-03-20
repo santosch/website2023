@@ -3,6 +3,7 @@ import Teaser from "@santosch/components/Teaser/Teaser";
 import Vita from "@santosch/components/Vita/Vita";
 import CoursesAndAchievements from "@santosch/components/CoursesAndAchievements/CoursesAndAchievements";
 import Skills from "@santosch/components/Skills/Skills";
+import Contact from "@santosch/components/Contact/Contact";
 
 export default function Home() {
     return (
@@ -84,6 +85,7 @@ export default function Home() {
             <main className={styles.main}>
                 <CoursesAndAchievements/>
             </main>
+            <Contact />
         </>
     )
 }

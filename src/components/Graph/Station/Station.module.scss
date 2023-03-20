@@ -44,7 +44,7 @@ $imageSize: 50px;
     left: 0;
     border-bottom: var(--line-width) solid var(--station-color);
     transform: translateX(100%);
-    transition: 0.5s transform 1.0s ease-in;
+    transition: 0.5s transform 0.3s ease-in;
 
     @media print {
       transform: translateX(0);
