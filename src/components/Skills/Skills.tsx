@@ -88,7 +88,7 @@ export default function Skills(
             <div className={styles.radarContainer}>
                 <RadarChart
                     values={categories}
-                    height={285}
+                    height={260}
                     selected={selected}
                     onSelect={setSelected}
                 />

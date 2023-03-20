@@ -45,7 +45,32 @@
 }
 
 .radarChartDummy {
-  height: 300px;
+  height: 275px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 153px;
+    height: 151px;
+    background-color: var(--background-dark);
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 51px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 151px;
+    height: 149px;
+    background-color: var(--background);
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  }
 }
 
 .keywords {
