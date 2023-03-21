@@ -2,8 +2,18 @@
 
 import styles from "./Footer.module.scss";
 import ActiveLink from "@santosch/components/ActiveLink/ActiveLink";
+import {useEffect} from "react";
+import consoleGreeting from "@santosch/helpers/consoleGreeting";
 
 export default function Footer(): JSX.Element {
+
+    useEffect(
+        () => {
+            consoleGreeting();
+        },
+        []
+    );
+
     return(
         <footer className={styles.container}>
             <div className={styles.inner}>
@@ -31,7 +41,10 @@ export default function Footer(): JSX.Element {
                     </ActiveLink>
                 </nav>
                 <div className={styles.content}>
-                    &copy; 2012-{(new Date()).getFullYear()} Sebastian Antosch
+                    <div className={styles.f12} />
+                    <p>
+                        &copy; 2012-{(new Date()).getFullYear()} Sebastian Antosch
+                    </p>
                 </div>
             </div>
         </footer>

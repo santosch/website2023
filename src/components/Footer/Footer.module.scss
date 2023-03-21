@@ -71,3 +71,19 @@
   color: var(--foreground-dark);
   font-size: 0.9rem;
 }
+
+.f12 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid var(--foreground-dark);
+  color: var(--foreground-dark);
+  line-height: 1.0;
+  margin-bottom: 60px;
+
+  &:before {
+    content: "F12"
+  }
+}
