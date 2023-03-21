@@ -84,6 +84,11 @@
   margin-bottom: 60px;
 
   &:before {
-    content: "F12"
+    content: "F12";
+    transition: 0.3s color;
+  }
+
+  &:hover:before {
+    color: var(--highlight);
   }
 }
