@@ -31,16 +31,7 @@ export default function Footer(): JSX.Element {
                     </ActiveLink>
                 </nav>
                 <div className={styles.content}>
-                    <h5>
-                        Sebastian Antosch
-                    </h5>
-                    <p>
-                        Softwareentwickler (Web, Frontend/Full-Stack), UI-Enthusiast<br/>
-                        BA Interactive Media
-                    </p>
-                    <p>
-                        &copy; 2012-{(new Date()).getFullYear()} Sebastian Antosch
-                    </p>
+                    &copy; 2012-{(new Date()).getFullYear()} Sebastian Antosch
                 </div>
             </div>
         </footer>
