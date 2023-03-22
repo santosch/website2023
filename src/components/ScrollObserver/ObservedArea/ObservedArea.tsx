@@ -5,21 +5,26 @@ import {InView} from "react-intersection-observer";
 export default function ObservedArea(
     {
         children,
-        key
+        id
     } : {
         children?: ReactNode;
-        key: string;
+        id: string;
     }
 ): JSX.Element {
 
     const {updateIntersection} = useContext(ScrollObserverContext);
 
     const onIntersectionChange = useCallback((inView: boolean, entry: IntersectionObserverEntry) => {
-        updateIntersection?.(key, entry.intersectionRatio);
-    }, [key, updateIntersection])
+        updateIntersection?.(id, entry.intersectionRatio);
+    }, [id, updateIntersection])
 
     return (
-        <InView as="div" onChange={onIntersectionChange}>
+        <InView
+            as="div"
+            id={id}
+            onChange={onIntersectionChange}
+            threshold={[0, 0.2, 0.4, 0.6, 0.8, 1]}
+        >
             {children}
         </InView>
     );

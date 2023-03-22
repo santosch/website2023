@@ -5,7 +5,7 @@ export default function sortObject(
         Object.entries(object)
             .sort(
                 (a, b) => {
-                return a[1] - b[1];
+                return b[1] - a[1];
             }
         )
     );

@@ -50,11 +50,11 @@
     background-color: var(--background);
     border-radius: 50%;
     border: 2px solid var(--highlight);
-    transition: 0.3s border-width;
+    transition: 0.3s border-width, 0.3s background-color;
   }
 
   &:hover:before {
-    border-width: calc(var(--graph-event-diameter) / 4);
+    background-color: var(--background-light)
   }
 
   &__active {
