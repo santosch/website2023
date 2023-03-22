@@ -10,7 +10,7 @@ export default function Graph(
     }
 ): JSX.Element {
 
-    const [highlightedEvent, setHighlightedEvent] = useState<string|null>(null)
+    const [highlightedEvent, setHighlightedEvent] = useState<string|null>(null);
 
     return (
         <GraphContext.Provider value={
