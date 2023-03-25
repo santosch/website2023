@@ -5,7 +5,7 @@
   padding-top: var(--graph-slot-width);
   padding-left: var(--right-col-left-padding);
 
-  @media screen and (min-width: $minDesktop) {
+  @include minDesktop {
     display: flex;
   }
 }
@@ -18,7 +18,7 @@
   position: relative;
   padding-bottom: 0.2rem;
 
-  @media screen and (min-width: $minDesktop) {
+  @include minDesktop {
     text-align: right;
     padding-right: 1rem;
     padding-bottom: 0;
@@ -50,7 +50,7 @@
   flex: 1 1 auto;
   font-size: 0.85rem;
 
-  @media screen and (min-width: $minTablet) {
+  @include minTablet {
     font-size: 0.95rem;
   }
 }

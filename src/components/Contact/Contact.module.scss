@@ -3,10 +3,10 @@
 .container {
   --radius: 20px;
 
-  @media screen and (min-width: $minTablet) {
+  @include minTablet {
     --radius: 60px;
   }
-  @media screen and (min-width: $minDesktop) {
+  @include minDesktop {
     --radius: 100px;
   }
 

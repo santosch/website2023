@@ -41,13 +41,13 @@
   --left-col-width: 200px;
   --right-col-left-padding: 1rem;
 
-  @media screen and (min-width: $minTablet) {
+  @include minTablet {
     --line-width: 4px;
     --graph-slot-width: 28px;
     --graph-event-diameter: 24px;
   }
 
-  @media screen and (min-width: $minDesktop) {
+  @include minDesktop {
     --graph-slot-width: 40px;
     --graph-event-diameter: 30px;
     --right-col-left-padding: 0;

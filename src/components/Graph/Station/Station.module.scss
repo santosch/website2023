@@ -5,7 +5,7 @@ $imageSize: 50px;
   display: flex;
   padding-left: var(--right-col-left-padding);
 
-  @media screen and (min-width: $minDesktop) {
+  @include minDesktop {
     padding-left: var(--left-col-width);
   }
 }
@@ -33,12 +33,12 @@ $imageSize: 50px;
   font-size: 1.1rem;
   padding-right: 0.1rem;
 
-  @media screen and (min-width: $minTablet) {
+  @include minTablet {
     font-size: 1.2rem;
     padding-right: 0.5rem;
   }
 
-  @media screen and (min-width: $minTablet) {
+  @include minDesktop {
     font-size: 1.3rem;
     padding-right: 1rem;
   }

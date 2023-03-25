@@ -91,7 +91,7 @@
     color: var(--highlight);
   }
 
-  @media screen and (min-width: $minDesktop)  {
+  @include minDesktop  {
     display: inline-block;
   }
 }
