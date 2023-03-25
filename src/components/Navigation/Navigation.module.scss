@@ -1,12 +1,14 @@
 .container {
+  display: none;
   position: sticky;
   top: 0;
   z-index: 2;
 
-  @media print {
-    display: none;
+  @media screen and (min-width: 1740px) {
+    display: block;
   }
 }
+
 
 .navigation {
   --diameter: var(--graph-event-diameter);
