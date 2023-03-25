@@ -8,6 +8,10 @@
   @include minDesktop {
     display: flex;
   }
+
+  @media print {
+    page-break-inside: avoid;
+  }
 }
 
 .date {

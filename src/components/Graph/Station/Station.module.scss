@@ -8,6 +8,10 @@ $imageSize: 50px;
   @include minDesktop {
     padding-left: var(--left-col-width);
   }
+
+  @media print {
+    margin-top: 1rem;
+  }
 }
 
 .imageContainer {
