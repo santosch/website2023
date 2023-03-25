@@ -27,9 +27,6 @@ $imageSize: 210px;
 }
 
 .container {
-  width: var(--max-width);
-  max-width: 100%;
-  margin: 0 auto;
   position: relative;
   display: flex;
 }

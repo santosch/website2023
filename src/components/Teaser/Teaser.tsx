@@ -29,46 +29,48 @@ export default function Teaser(
             </video>
 
             <div className={styles.outerContainer}>
-                <div className={styles.container}>
+                <main className={styles.main}>
+                    <div className={styles.container}>
 
-                    <div className={styles.social}>
-                        <a
-                            className={styles.socialIcon}
-                            href="https://www.xing.com/profile/Sebastian_Antosch/"
-                            title="Sebastian Antosch auf XING"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaXing/>
-                        </a>
-                        <a
-                            className={styles.socialIcon}
-                            href="https://github.com/santosch"
-                            title="Sebastian Antosch auf GitHub"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaGithub/>
-                        </a>
-                        <a
-                            className={styles.socialIcon}
-                            href="mailto:write@sebastian-antosch.de"
-                            title="Mail an Sebastian Antosch"
-                        >
-                            <FaEnvelope/>
-                        </a>
-                    </div>
-
-                    <div className={styles.quote}>
-                        <h3 className={styles.quoteText}>
-                            {quote}
-                        </h3>
-                        <div className={styles.quoteAuthor}>
-                            ~ {author}
+                        <div className={styles.social}>
+                            <a
+                                className={styles.socialIcon}
+                                href="https://www.xing.com/profile/Sebastian_Antosch/"
+                                title="Sebastian Antosch auf XING"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FaXing/>
+                            </a>
+                            <a
+                                className={styles.socialIcon}
+                                href="https://github.com/santosch"
+                                title="Sebastian Antosch auf GitHub"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FaGithub/>
+                            </a>
+                            <a
+                                className={styles.socialIcon}
+                                href="mailto:write@sebastian-antosch.de"
+                                title="Mail an Sebastian Antosch"
+                            >
+                                <FaEnvelope/>
+                            </a>
                         </div>
-                    </div>
 
-                </div>
+                        <div className={styles.quote}>
+                            <h3 className={styles.quoteText}>
+                                {quote}
+                            </h3>
+                            <div className={styles.quoteAuthor}>
+                                ~ {author}
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
             </div>
         </div>
     );

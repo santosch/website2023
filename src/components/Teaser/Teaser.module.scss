@@ -51,10 +51,11 @@ $socialDiameter: 40px;
   }
 }
 
+.main {
+  display: flex;
+}
+
 .container {
-  width: var(--max-width);
-  max-width: 100%;
-  margin: 0 auto;
   border-left: var(--border);
   display: flex;
   align-items: center;
