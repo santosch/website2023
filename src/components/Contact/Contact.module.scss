@@ -1,6 +1,14 @@
+@import "../../styles/variables";
 
 .container {
-  --radius: 100px;
+  --radius: 20px;
+
+  @media screen and (min-width: $minTablet) {
+    --radius: 60px;
+  }
+  @media screen and (min-width: $minDesktop) {
+    --radius: 100px;
+  }
 
   background-image: url("/assets/images/contact-bg.jpg");
   background-repeat: no-repeat;

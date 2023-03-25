@@ -1,8 +1,13 @@
+@import "../../../styles/variables";
 $imageSize: 50px;
 
 .container {
   display: flex;
-  padding-left: var(--left-col-width);
+  padding-left: var(--right-col-left-padding);
+
+  @media screen and (min-width: $minDesktop) {
+    padding-left: var(--left-col-width);
+  }
 }
 
 .imageContainer {
@@ -25,8 +30,18 @@ $imageSize: 50px;
 }
 
 .text {
-  font-size: 1.3rem;
-  padding-right: 1rem;
+  font-size: 1.1rem;
+  padding-right: 0.1rem;
+
+  @media screen and (min-width: $minTablet) {
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+  }
+
+  @media screen and (min-width: $minTablet) {
+    font-size: 1.3rem;
+    padding-right: 1rem;
+  }
 }
 
 .line {

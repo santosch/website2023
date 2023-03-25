@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .container {
   background-color: var(--background-dark);
   border-top: 1px solid var(--highlight-dark);
@@ -70,7 +72,7 @@
 }
 
 .f12 {
-  display: inline-block;
+  display: none;
   width: 40px;
   height: 40px;
   padding: 3px;
@@ -87,5 +89,9 @@
 
   &:hover:before {
     color: var(--highlight);
+  }
+
+  @media screen and (min-width: $minDesktop)  {
+    display: inline-block;
   }
 }

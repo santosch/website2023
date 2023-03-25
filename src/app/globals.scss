@@ -1,4 +1,5 @@
 @import "node_modules/reset-css/reset.css";
+@import "../styles/variables";
 
 /* roboto-slab-regular - latin */
 @font-face {
@@ -27,28 +28,44 @@
   --highlight: #00bbff;
   --highlight-dark: #0083b3;
 
-  --line-width: 4px;
+  --line-width: 2px;
   --half-line-width: calc(var(--line-width) / 2);
   --border: var(--line-width) solid var(--highlight);
 
-  --graph-slot-width: 40px;
-  --graph-event-diameter: calc(0.75 * var(--graph-slot-width));
+  --graph-slot-width: 14px;
+  --graph-event-diameter: 14px;
   --chart-diameter: 120px;
 
-  --max-width: calc(1100px + 2 * var(--graph-event-diameter));
+  --max-width: calc(#{$minDesktop} + 2 * var(--graph-event-diameter));
   --main-padding: 0 max(var(--graph-event-diameter), 1rem);
   --left-col-width: 200px;
+  --right-col-left-padding: 1rem;
 
+  @media screen and (min-width: $minTablet) {
+    --line-width: 4px;
+    --graph-slot-width: 28px;
+    --graph-event-diameter: 24px;
+  }
+
+  @media screen and (min-width: $minDesktop) {
+    --graph-slot-width: 40px;
+    --graph-event-diameter: 30px;
+    --right-col-left-padding: 0;
+  }
 
   @media print {
     --graph-slot-width: 15px;
   }
+
+
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 html,

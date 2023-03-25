@@ -18,11 +18,11 @@ export default function Contact(): JSX.Element {
                         </h4>
                         <p>
                             BA Interactive Media<br/>
-                            Softwareentwickler (Web, Frontend/Full-Stack)
+                            Softwareentwickler (Web,&nbsp;Frontend/Full&#x2011;Stack)
                         </p>
                         <p>
                             <a href="mailto:write@sebastian-antosch.de">
-                                write@sebastian-antosch.de
+                                write@sebastian&#x2011;antosch.de
                             </a>
                         </p>
                     </div>
