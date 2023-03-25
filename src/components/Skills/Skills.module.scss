@@ -10,6 +10,7 @@
 
   @media print {
     page-break-inside: avoid;
+    border: none;
   }
 }
 
@@ -38,9 +39,12 @@
     transform: scale(-1, 1);
   }
 
+  @include minDesktop(false) {
+    margin-left: calc(-1 * (var(--chart-diameter) / 2) - var(--line-width));
+  }
+
   @include minDesktop {
     padding: 2rem 0;
-    margin-left: calc(-1 * (var(--chart-diameter) / 2) - var(--line-width));
 
     svg {
       transform: none;

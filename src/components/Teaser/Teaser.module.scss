@@ -5,6 +5,11 @@ $socialDiameter: 40px;
 .teaser {
   position: relative;
 
+  @media print {
+    page-break-inside: avoid;
+    border: none;
+  }
+
   video {
     position: absolute;
     bottom: 0;
@@ -26,11 +31,11 @@ $socialDiameter: 40px;
     box-shadow: none;
   }
 
-  @include minTablet {
+  @include minTablet(false) {
     min-height: 350px;
   }
 
-  @include minDesktop {
+  @include minDesktop(false) {
     min-height: 450px;
   }
 }

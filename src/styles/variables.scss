@@ -2,14 +2,29 @@
 $minDesktop: 1100px;
 $minTablet: 600px;
 
-@mixin minTablet() {
-  @media screen and (min-width: $minTablet) {
+@mixin minTablet($andPrint: true) {
+  @media (min-width: $minTablet) {
     @content;
+  }
+  @if $andPrint {
+    @media print, (min-width: $minTablet) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $minTablet) {
+      @content;
+    }
   }
 }
 
-@mixin minDesktop() {
-  @media screen and (min-width: $minDesktop) {
-    @content;
+@mixin minDesktop($andPrint: true) {
+  @if $andPrint {
+    @media print, (min-width: $minDesktop) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $minDesktop) {
+      @content;
+    }
   }
 }

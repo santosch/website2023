@@ -9,20 +9,39 @@
   @include minDesktop {
     --radius: 100px;
   }
-
-  background-image: url("/assets/images/contact-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  
+  position: relative;
   box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.5);
+
+  @media print {
+    box-shadow: none;
+    margin-top: 6rem;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .innerContainer {
+  position: relative;
+  z-index: 2;
   border-left: var(--border);
   display: flex;
   align-items: center;
   padding: 3rem 0;
   min-height: 385px;
+
+  @media print {
+    border-left: none;
+  }
 }
 
 .curve {
@@ -42,7 +61,12 @@
     top: calc(var(--radius) - var(--half-line-width));
     border-radius: 50%;
     border: var(--border);
+
+    @media print {
+      display: none;
+    }
   }
+
 }
 
 .placeholder {
@@ -52,6 +76,10 @@
 .line {
   flex: 1 1 calc(50% - var(--radius));
   border-bottom: var(--border);
+
+  @media print {
+    border-bottom: none;
+  }
 }
 
 .card {

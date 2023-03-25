@@ -5,6 +5,12 @@ import {FaEnvelope} from "react-icons/fa";
 export default function Contact(): JSX.Element {
     return (
         <div className={styles.container}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+                src="/assets/images/contact-bg.jpg"
+                alt=""
+                className={styles.bgImage}
+            />
             <section>
                 <div className={styles.innerContainer}>
                     <div className={styles.curve} />

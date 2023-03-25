@@ -3,11 +3,6 @@
 .container {
   background-color: var(--background-dark);
   border-top: 1px solid var(--highlight-dark);
-
-  @media print {
-    break-inside: avoid;
-    margin-top: 3rem;
-  }
 }
 
 .inner {
@@ -91,7 +86,20 @@
     color: var(--highlight);
   }
 
-  @include minDesktop  {
+  @include minDesktop(false)  {
     display: inline-block;
+  }
+}
+
+.printNotice {
+  display: none;
+
+  svg {
+    position: relative;
+    top: 2px;
+  }
+
+  @media print {
+    display: inline;
   }
 }

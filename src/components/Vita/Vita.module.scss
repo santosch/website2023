@@ -29,4 +29,8 @@
   @include minDesktop {
     font-size: 2rem;
   }
+
+  @media print {
+    page-break-before: always;
+  }
 }
