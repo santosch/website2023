@@ -1,4 +1,4 @@
-import './globals.scss'
+import '../styles/globals.scss'
 import Hero from "@santosch/components/Hero/Hero";
 import Footer from "@santosch/components/Footer/Footer";
 import type {ReactNode} from "react";
