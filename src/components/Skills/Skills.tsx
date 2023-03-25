@@ -51,39 +51,41 @@ export default function Skills(
     return (
         <div className={styles.container}>
 
-            <div className={styles.circleContainer}>
-                <CircleChart
-                    value={average}
-                    height={120}
-                    centerBackground={dark ? '#161616' : '#212121'}
-                />
-                <div className={styles.circleTitle}>
-                    {title}
+            <div className={styles.leftContainer}>
+                <div className={styles.circleContainer}>
+                    <CircleChart
+                        value={average}
+                        height={120}
+                        centerBackground={dark ? '#161616' : '#212121'}
+                    />
+                    <div className={styles.circleTitle}>
+                        {title}
+                    </div>
                 </div>
-            </div>
-            <div className={styles.keywords}>
-                {Object.keys(sortObjectAsPyramid(categories)).map((key, index) => {
-                    return (
-                        <Fragment key={key}>
-                            {!!index && (index % 3 === 0) &&
-                                <br/>
-                            }
-                            <SkillKeyword
-                                key={key}
-                                keyword={key}
-                                rating={categories[key]}
-                                onSelect={setSelected}
-                                className={classNames(
-                                    styles.keyword,
-                                    {
-                                        [styles.keyword__selected]: key === selected,
-                                    }
-                                )}
-                            />
-                            {' '}
-                        </Fragment>
-                    );
-                })}
+                <div className={styles.keywords}>
+                    {Object.keys(sortObjectAsPyramid(categories)).map((key, index) => {
+                        return (
+                            <Fragment key={key}>
+                                {!!index && (index % 3 === 0) &&
+                                    <br className={styles.skillBr}/>
+                                }
+                                <SkillKeyword
+                                    key={key}
+                                    keyword={key}
+                                    rating={categories[key]}
+                                    onSelect={setSelected}
+                                    className={classNames(
+                                        styles.keyword,
+                                        {
+                                            [styles.keyword__selected]: key === selected,
+                                        }
+                                    )}
+                                />
+                                {' '}
+                            </Fragment>
+                        );
+                    })}
+                </div>
             </div>
             <div className={styles.radarContainer}>
                 <RadarChart

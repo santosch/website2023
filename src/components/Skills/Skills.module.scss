@@ -1,18 +1,42 @@
+@import "../../styles/variables";
+
 .container {
   border-left: var(--border);
-  display: flex;
-  align-items: center;
+
+  @include minDesktop {
+    display: flex;
+    align-items: center;
+  }
 
   @media print {
     page-break-inside: avoid;
   }
 }
 
+.leftContainer {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+
+  @include minTablet {
+    justify-content: space-between;
+  }
+
+  @include minDesktop {
+    padding-top: 0;
+  }
+}
+
 .circleContainer {
-  padding: 2rem 0;
   flex: 0 0 var(--chart-diameter);
-  margin-left: calc(-1 * (var(--chart-diameter) / 2) - var(--line-width));
+  width: var(--chart-diameter);
   position: relative;
+
+  @include minDesktop {
+    padding: 2rem 0;
+    margin-left: calc(-1 * (var(--chart-diameter) / 2) - var(--line-width));
+  }
 }
 
 .circleChartDummy {
@@ -41,7 +65,11 @@
 .radarContainer {
   width: 320px;
   flex: 0 0 320px;
-  margin-bottom: -25px;
+  margin: 0 auto 0 auto;
+
+  @include minDesktop {
+    margin: 0 0 -25px 0;
+  }
 }
 
 .radarChartDummy {
@@ -79,14 +107,39 @@
   text-align: center;
   max-width: 100%;
   margin: 0 auto;
+  order: 1;
+  font-size: 6px;
+
+  @include minTablet {
+    font-size: 10px;
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  @include minDesktop {
+    flex: 1 1 auto;
+    margin: 0 auto;
+  }
 }
 
 .keyword {
   transition: 0.3s color;
-  padding: 1rem;
+  padding: 0.5rem;
   cursor: default;
 
   &__selected {
     color: var(--highlight);
+  }
+
+  @include minTablet {
+    padding: 1rem;
+  }
+}
+
+.skillBr {
+  display: none;
+
+  @include minTablet {
+    display: inline;
   }
 }
