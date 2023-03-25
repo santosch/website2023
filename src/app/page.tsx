@@ -25,7 +25,7 @@ export default function Home() {
                 />
 
                 <ObservedArea id="skills">
-                    <main className={styles.main}>
+                    <section>
                         <Skills
                             title="Frontend"
                             categories={{
@@ -40,9 +40,9 @@ export default function Home() {
                                 KnockoutJS: 85,
                             }}
                         />
-                    </main>
+                    </section>
                     <div className={styles.dark}>
-                        <main className={styles.main}>
+                        <section>
                             <Skills
                                 title="Backend"
                                 categories={{
@@ -58,9 +58,9 @@ export default function Home() {
                                 }}
                                 dark={true}
                             />
-                        </main>
+                        </section>
                     </div>
-                    <main className={styles.main}>
+                    <section>
                         <Skills
                             title="Tools"
                             categories={{
@@ -74,7 +74,7 @@ export default function Home() {
                                 Photoshop: 65,
                             }}
                         />
-                    </main>
+                    </section>
                 </ObservedArea>
 
                 <Teaser
@@ -89,9 +89,9 @@ export default function Home() {
                 />
 
                 <ObservedArea id="vita">
-                    <main className={styles.main}>
+                    <section>
                         <Vita/>
-                    </main>
+                    </section>
                 </ObservedArea>
 
                 <Teaser
@@ -107,9 +107,9 @@ export default function Home() {
                 />
 
                 <ObservedArea id="trainings">
-                    <main className={styles.main}>
+                    <section>
                         <CoursesAndAchievements/>
-                    </main>
+                    </section>
                 </ObservedArea>
 
                 <ObservedArea id="contact">

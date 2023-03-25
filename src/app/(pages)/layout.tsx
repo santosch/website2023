@@ -6,8 +6,8 @@ export default function Layout({
   children: ReactNode
 }) {
   return (
-    <main>
+    <section>
         {children}
-    </main>
+    </section>
   )
 }

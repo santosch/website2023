@@ -29,7 +29,7 @@ export default function Teaser(
             </video>
 
             <div className={styles.outerContainer}>
-                <main className={styles.main}>
+                <section className={styles.main}>
                     <div className={styles.container}>
 
                         <div className={styles.social}>
@@ -70,7 +70,7 @@ export default function Teaser(
                         </div>
 
                     </div>
-                </main>
+                </section>
             </div>
         </div>
     );

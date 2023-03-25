@@ -5,7 +5,7 @@ import {FaEnvelope} from "react-icons/fa";
 export default function Contact(): JSX.Element {
     return (
         <div className={styles.container}>
-            <main>
+            <section>
                 <div className={styles.innerContainer}>
                     <div className={styles.curve} />
                     <div className={styles.line} />
@@ -28,7 +28,7 @@ export default function Contact(): JSX.Element {
                     </div>
                     <div className={styles.placeholder} />
                 </div>
-            </main>
+            </section>
         </div>
     )
 }

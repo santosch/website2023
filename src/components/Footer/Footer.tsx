@@ -16,7 +16,7 @@ export default function Footer(): JSX.Element {
 
     return(
         <footer className={styles.container}>
-            <main>
+            <section>
                 <div className={styles.inner}>
                     <nav className={styles.nav}>
                         <ActiveLink
@@ -48,7 +48,7 @@ export default function Footer(): JSX.Element {
                         </p>
                     </div>
                 </div>
-            </main>
+            </section>
         </footer>
     );
 }

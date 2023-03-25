@@ -6,7 +6,7 @@ export default function Hero(): JSX.Element {
         <header>
             <div className={styles.image}>
                 <div className={styles.glass}>
-                    <main>
+                    <section>
                         <div className={styles.container}>
                             <div className={styles.photoContainer}>
                                 <Image
@@ -26,7 +26,7 @@ export default function Hero(): JSX.Element {
                                 </h2>
                             </div>
                         </div>
-                    </main>
+                    </section>
 
                 </div>
             </div>
