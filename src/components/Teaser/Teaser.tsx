@@ -15,7 +15,6 @@ export default function Teaser(
 ): JSX.Element {
     return (
         <div className={styles.teaser}>
-
             <video
                 poster={`/assets/video/${videoKey}.jpg`}
                 autoPlay={true}

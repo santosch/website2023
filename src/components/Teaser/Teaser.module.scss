@@ -1,53 +1,37 @@
+@import "../../styles/variables";
 
 $socialDiameter: 40px;
 
-@mixin mobile() {
-  @media screen and (max-width: 800px) {
-    @content
-  }
-}
-
 .teaser {
   position: relative;
-  height: 0;
-  margin: 0;
-  width: 100%;
-  padding-bottom: 20%;
-  overflow: hidden;
-
-  @include mobile() {
-    padding-bottom: 55%;
-  }
-
-  @media print {
-    padding-bottom: 25%;
-  }
 
   video {
     position: absolute;
-    right: 0;
-    bottom: -45%;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: auto;
-
-    @include mobile {
-      top: 0;
-    }
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
   }
 }
 
 .outerContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
   box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  display: flex;
 
   @media print {
     box-shadow: none;
+  }
+
+  @include minTablet {
+    min-height: 350px;
+  }
+
+  @include minDesktop {
+    min-height: 450px;
   }
 }
 
@@ -69,6 +53,7 @@ $socialDiameter: 40px;
 
 .social {
   margin-left: - (($socialDiameter + 4) / 2);
+  margin-top: 36px;
 
   @media print {
     display: none;
@@ -111,10 +96,15 @@ $socialDiameter: 40px;
   color: var(--background);
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  margin: 1rem 0;
 }
 
 .quoteText {
-  font-size: 1.1rem;
+  font-size: 1rem;
+
+  @include minTablet {
+    font-size: 1.1rem;
+  }
 }
 
 .quoteAuthor {

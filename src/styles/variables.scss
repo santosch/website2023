@@ -1,3 +1,15 @@
 
 $minDesktop: 1100px;
-$minTablet: 500px;
+$minTablet: 600px;
+
+@mixin minTablet() {
+  @media screen and (min-width: $minTablet) {
+    @content;
+  }
+}
+
+@mixin minDesktop() {
+  @media screen and (min-width: $minDesktop) {
+    @content;
+  }
+}
