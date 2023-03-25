@@ -53,6 +53,7 @@ export default function Skills(
 
             <div className={styles.leftContainer}>
                 <div className={styles.circleContainer}>
+                    <div className={styles.circleCurve} />
                     <CircleChart
                         value={average}
                         height={120}

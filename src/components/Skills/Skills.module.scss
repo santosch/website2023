@@ -32,10 +32,37 @@
   flex: 0 0 var(--chart-diameter);
   width: var(--chart-diameter);
   position: relative;
+  margin-left: 10px;
+
+  svg {
+    transform: scale(-1, 1);
+  }
 
   @include minDesktop {
     padding: 2rem 0;
     margin-left: calc(-1 * (var(--chart-diameter) / 2) - var(--line-width));
+
+    svg {
+      transform: none;
+    }
+  }
+}
+
+.circleCurve {
+  position: absolute;
+  top: 50%;
+  left: calc(-1 * var(--half-line-width));
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--line-width);
+  border-color: transparent;
+  border-left-color: var(--highlight);
+  transform: translate(calc((-1 * var(--half-line-width)) - 10px), calc(-1 * var(--half-line-width))) rotate(45deg);
+
+  @include minDesktop {
+    display: none;
   }
 }
 
