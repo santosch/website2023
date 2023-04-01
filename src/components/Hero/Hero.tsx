@@ -50,6 +50,20 @@ export default function Hero(
                                         Softwareentwickler • Javascript-Junkie • UI-Enthusiast
                                     </h2>
                                 </div>
+                                {children &&
+                                    <div
+                                        className={styles.stickyToggleContainer}
+                                        onClick={toggle}
+                                    >
+                                        <div
+                                            className={classNames(
+                                                styles.toggle,
+                                                {
+                                                    [styles.toggle__open]: open,
+                                                }
+                                            )}/>
+                                    </div>
+                                }
                             </div>
                         </section>
                     </div>
@@ -74,7 +88,7 @@ export default function Hero(
                     </h5>
                     {children &&
                         <div
-                            className={styles.stickyToggle}
+                            className={styles.stickyToggleContainer}
                             onClick={toggle}
                         >
                             <div

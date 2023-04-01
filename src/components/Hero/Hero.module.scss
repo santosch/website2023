@@ -45,6 +45,7 @@ $glassHeight: 150px;
 .container {
   position: relative;
   display: flex;
+  align-items: center;
 }
 
 .photoContainer {
@@ -52,6 +53,7 @@ $glassHeight: 150px;
 
   margin-left: calc(-1 * ((var(--image-size) - 4px) / 2));
   margin-top: calc(-1 *  ((var(--image-size) - #{$glassHeight}) / 2));
+  margin-bottom: calc(-1 *  ((var(--image-size) - #{$glassHeight}) / 2));
   position: relative;
   z-index: 1;
 }
@@ -83,6 +85,10 @@ $glassHeight: 150px;
   font-weight: lighter;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.toggleContainer {
+  flex: 0 0 auto;
 }
 
 .toggle {
@@ -190,7 +196,7 @@ $glassHeight: 150px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.stickyToggle {
+.stickyToggleContainer {
   flex: 0 0 auto;
   padding: 0.5rem 1rem;
   margin-right: -1rem;
