@@ -30,6 +30,10 @@ export default function Home() {
                     )}
                 </Hero>
 
+                <section className={styles.dummy}>
+                    <div className={styles.dummyInner} />
+                </section>
+
                 <ObservedArea id="skills">
                     <section>
                         <Skills

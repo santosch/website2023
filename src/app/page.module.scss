@@ -1,3 +1,16 @@
 .dark {
   background-color: var(--background-dark);
 }
+
+// this is to draw a line to the top, even when the hero is transformed to the top
+.dummy {
+  position: relative;
+}
+
+.dummyInner {
+  border-left: var(--border);
+  position: absolute;
+  bottom: 0;
+  top: -999px;
+
+}
