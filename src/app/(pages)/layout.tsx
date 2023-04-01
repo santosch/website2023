@@ -1,4 +1,6 @@
 import type {ReactNode} from "react";
+import Hero from "@santosch/components/Hero/Hero";
+import styles from "./layout.module.scss"
 
 export default function Layout({
   children,
@@ -6,8 +8,11 @@ export default function Layout({
   children: ReactNode
 }) {
   return (
-    <section>
-        {children}
-    </section>
+    <>
+      <Hero/>
+      <section className={styles.section}>
+          {children}
+      </section>
+    </>
   )
 }

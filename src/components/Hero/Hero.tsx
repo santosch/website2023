@@ -1,8 +1,26 @@
+"use client";
+
 import styles from "./Hero.module.scss";
 import Image from "next/image";
 import classNames from "classnames";
+import {useState} from "react";
 
-export default function Hero(): JSX.Element {
+export default function Hero(
+    {
+        children
+    }: {
+        children?: (
+            open: boolean,
+            setOpen: (open: boolean) => void
+        ) => JSX.Element
+    }
+): JSX.Element {
+
+    const [open, setOpen] = useState(false);
+    const toggle = () => {
+        setOpen((open) => !open);
+    }
+
     return (
         <>
             <header className={styles.hero}>
@@ -29,7 +47,6 @@ export default function Hero(): JSX.Element {
                                 </div>
                             </div>
                         </section>
-
                     </div>
                 </div>
             </header>
@@ -50,8 +67,21 @@ export default function Hero(): JSX.Element {
                     <h5 className={styles.stickyHeadline}>
                         Sebastian Antosch
                     </h5>
+                    <div
+                        className={styles.stickyToggle}
+                        onClick={toggle}
+                    >
+                        <div
+                            className={classNames(
+                                styles.toggle,
+                                {
+                                    [styles.toggle__open]: open,
+                                }
+                        )}/>
+                    </div>
                 </section>
             </header>
+            { children && children(open, setOpen) }
         </>
     );
 }

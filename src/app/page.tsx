@@ -9,20 +9,24 @@ import Contact from "@santosch/components/Contact/Contact";
 import Navigation from "@santosch/components/Navigation/Navigation";
 import ObservedArea from "@santosch/components/ScrollObserver/ObservedArea/ObservedArea";
 import ScrollObserver from "@santosch/components/ScrollObserver/ScrollObserver";
+import Hero from "@santosch/components/Hero/Hero";
 
 export default function Home() {
     return (
         <>
             <ScrollObserver>
-
-                <Navigation
-                    entries={[
-                        {id: 'skills', label: 'Skills'},
-                        {id: 'vita', label: 'Vita'},
-                        {id: 'trainings', label: 'Trainings & Achievements'},
-                        {id: 'contact', label: 'Kontakt'},
-                    ]}
-                />
+                <Hero>
+                    {(open, setOpen) => (
+                        <Navigation
+                            entries={[
+                                {id: 'skills', label: 'Skills'},
+                                {id: 'vita', label: 'Vita'},
+                                {id: 'trainings', label: 'Trainings & Achievements'},
+                                {id: 'contact', label: 'Kontakt'},
+                            ]}
+                        />
+                    )}
+                </Hero>
 
                 <ObservedArea id="skills">
                     <section>

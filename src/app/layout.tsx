@@ -12,7 +12,6 @@ export default function RootLayout({
     <html lang="de">
       <head />
       <body>
-        <Hero/>
         {children}
         <Footer />
       </body>
