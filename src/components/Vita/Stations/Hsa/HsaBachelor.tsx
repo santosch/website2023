@@ -8,6 +8,7 @@ export default function HsaBachelor(): JSX.Element {
             color={COLORS.HSA}
             date="10/2011 - 09/2015"
             title="Interaktive Medien (BA)"
+            tags={['AngularJS', 'Ionic', 'Cordova', 'CSS', 'Python']}
         >
             Abschluss Note 1,2 - <em>&bdquo;mit Auszeichnung bestanden&rdquo;</em><br/>
             als Abschlussjahrgangsbester (Top 2% der Absolventen)

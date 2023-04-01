@@ -8,6 +8,7 @@ export default function CreaWebdev(): JSX.Element {
             color={COLORS.CREA}
             date="10/2015 - 02/2016"
             title="Webentwickler"
+            tags={['TYPO3', 'Extbase', 'jQuery', '(S)CSS']}
         >
             <p>
                 Erstellung und Wartung von Webseiten, Landingpages und Shops basierend auf diversen CMS

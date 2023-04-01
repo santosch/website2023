@@ -8,6 +8,7 @@ export default function HsaThesis(): JSX.Element {
             color={COLORS.HSA}
             date="03/2015 - 06/2015"
             title="Bachelorarbeit (1,0)"
+            tags={['PHP', 'MySQL', '(S)CSS']}
         >
             <em>
                 &bdquo;Amanu - Webbasierte Projektmanagementsoftware für Selbstständige und Freelancer<br/>

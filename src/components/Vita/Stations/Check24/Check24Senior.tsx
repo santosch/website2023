@@ -8,6 +8,7 @@ export default function Check24Senior(): JSX.Element {
             color={COLORS.CHECK}
             date="04/2019 - 09/2022"
             title="Senior Softwareentwickler"
+            tags={['React', 'Redux', 'KnockoutJS', '(S)CSS', 'Laminas']}
         >
             <p>
                 Einführung von React und Redux (+ Redux-Toolkit) sowie TypeScript im Frontend-Projekt;

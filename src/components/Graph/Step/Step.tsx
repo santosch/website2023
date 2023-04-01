@@ -8,12 +8,14 @@ export default function Step(
         children,
         date,
         title,
+        tags,
         color,
-        eventKey
+        eventKey,
     }: {
         children?: ReactNode,
         date?: ReactNode,
         title?: ReactNode,
+        tags?: Array<string>,
         color?: string,
         eventKey: string
 
@@ -45,6 +47,23 @@ export default function Step(
                     <div className={styles.description}>
                         {children}
                     </div>
+                }
+                {tags && tags.length &&
+                    <ul className={classNames(
+                        styles.tags,
+                        {
+                            [styles.tags__highlighted]: isHighlighted
+                        }
+                    )}>
+                        {tags.map((tag) =>
+                            <li
+                                className={styles.tag}
+                                key={tag}
+                            >
+                                {tag}
+                            </li>
+                        )}
+                    </ul>
                 }
             </div>
         </div>

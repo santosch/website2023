@@ -8,6 +8,7 @@ export default function Check24Teamlead(): JSX.Element {
             color={COLORS.CHECK}
             date="seit 10/2022"
             title="stellv. Teamleiter Softwareentwicklung"
+            tags={['React', 'Redux', 'Laminas']}
         >
             <p>
                 Geteilte Personalverantwortung mit dem Teamlead (~12 MA);

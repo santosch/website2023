@@ -13,6 +13,7 @@ export default function IsanDev(): JSX.Element {
                     <small>im Nebenerwerb</small>
                 </>
             )}
+            tags={['Joomla', 'jQuery', '(S)CSS']}
         >
             <p>
                 Konzeption, Design & Erstellung von Websiten für lokale Unternehmen basierend auf CMS Joomla;

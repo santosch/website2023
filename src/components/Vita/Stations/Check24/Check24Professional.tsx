@@ -8,6 +8,7 @@ export default function Check24Professional(): JSX.Element {
             color={COLORS.CHECK}
             date="02/2016 - 03/2019"
             title="Softwareentwickler"
+            tags={['jQuery', 'Zend 3 / Laminas', 'KnockoutJS', '(S)CSS']}
         >
             <p>
                 Weiterentwicklung der Frontend-Applikation des Mietwagenvergleichs basierend auf PHP (Zend&nbsp;Framework&nbsp;2/3&nbsp;/&nbsp;Laminas),
