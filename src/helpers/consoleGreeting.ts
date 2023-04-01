@@ -38,6 +38,8 @@ export default function consoleGreeting(): void {
         SASS: 1.58,
         'Apex Charts': 3,
         'React Icons': 4.7,
+        'React Intersection Observer': 9.4,
+        eslint: 8.34
     });
     console.log(`    
 %c👀 Want to see more?
