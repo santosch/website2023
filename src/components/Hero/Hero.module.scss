@@ -8,10 +8,14 @@ $glassHeight: 150px;
   position: relative;
   z-index: 200;
   transition: 0.7s transform;
-    //transform: translate(0, -120%);
+  transform: translate(0, 0);
 
   &__hidden {
     transform: translate(0, -120%);
+  }
+
+  @include minNav {
+    transform: translate(0, 0);
   }
 }
 
