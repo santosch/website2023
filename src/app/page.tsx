@@ -42,11 +42,11 @@ export default function Home() {
                                 HTML: 85,
                                 ['(S)CSS']: 85,
                                 JS: 95,
+                                TypeScript: 78,
                                 React: 92,
                                 Redux: 87,
                                 NextJS: 35,
-                                Webpack: 60,
-                                jQuery: 80,
+                                jQuery: 75,
                                 KnockoutJS: 85,
                             }}
                         />
@@ -80,6 +80,7 @@ export default function Home() {
                                 Jira: 70,
                                 Confluence: 65,
                                 Bamboo: 65,
+                                Webpack: 60,
                                 Illustrator: 40,
                                 Photoshop: 65,
                             }}
