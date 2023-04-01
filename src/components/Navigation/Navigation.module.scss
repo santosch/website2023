@@ -1,38 +1,73 @@
-.container {
-  display: none;
-  position: sticky;
-  top: 64px;
-  z-index: 5;
+@import "../../styles/variables";
 
-  @media screen and (min-width: 1740px) {
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background-dark);
+  z-index: 5;
+  transform: translate(100%, 0);
+  transition: 0.7s transform;
+
+  &__open {
+    transform: translate(0, 0);
+  }
+
+  @include minNav {
     display: block;
+    position: sticky;
+    top: 64px;
+    transition: none;
+    transform: none;
   }
 }
 
-
 .navigation {
   --diameter: var(--graph-event-diameter);
-  --bar-width: 30px;
+  --bar-width: 0px;
 
-  position: absolute;
-  top: 15px;
-  left: 0;
-  width: var(--bar-width);
-  border: var(--border);
-  border-left: none;
-  border-radius: 0 var(--bar-width) var(--bar-width) 0;
-  padding: calc(var(--bar-width) / 2) 0;
+  margin: 0 auto;
+  width: calc(var(--max-width) - (2 * var(--main-padding-single)));
+  max-width: calc(100% - 2 * var(--main-padding-single));
+  height: 100%;
+  border-left: var(--border);
+  padding-top: 180px;
+
+  @include minNav {
+    --bar-width: 30px;
+
+    position: absolute;
+    top: 15px;
+    left: 0;
+    height: auto;
+    width: var(--bar-width);
+    border: var(--border);
+    border-left: none;
+    border-radius: 0 var(--bar-width) var(--bar-width) 0;
+    padding: calc(var(--bar-width) / 2) 0;
+  }
+
 }
 
 .entry {
-  display: inline-block;
+  display: block;
   position: relative;
   white-space: nowrap;
   letter-spacing: 0;
   transition: 0.3s letter-spacing, 0.3s color;
-  margin: calc(var(--bar-width) / 2) 0;
   line-height: 1.0;
   padding-left: calc(var(--bar-width) + 2rem);
+
+  &:not(:first-child) {
+    margin-top: 4rem;
+  }
+
+  @include minNav {
+    margin: calc(var(--bar-width) / 2) 0 !important;
+    display: inline-block;
+  }
 
   &:before {
     content: "";

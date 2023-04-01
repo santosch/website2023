@@ -6,15 +6,24 @@ import classNames from "classnames";
 export default function Navigation(
     {
         entries,
+        open,
+        setOpen,
     }: {
         entries: Array<{id: string, label: string}>
+        open?: boolean,
+        setOpen?: (open: boolean) => void
     }
 ): JSX.Element {
 
     const {current} = useContext(ScrollObserverContext);
 
     return (
-        <div className={styles.container}>
+        <div className={classNames(
+            styles.container,
+            {
+                [styles.container__open]: open,
+            }
+        )}>
             <nav className={styles.navigation}>
                 {entries.map(({id, label}) => (
                     <a
@@ -27,6 +36,9 @@ export default function Navigation(
                                 [styles.entry__long]: label.length > 8,
                             }
                         )}
+                        onClick={() => {
+                            setOpen?.(false);
+                        }}
                     >
                         {label}
                     </a>

@@ -7,6 +7,11 @@ $glassHeight: 150px;
 
   position: relative;
   z-index: 200;
+  transition: 0.7s transform;
+
+  &__hidden {
+    transform: translate(0, -120%);
+  }
 }
 
 .image {
@@ -81,8 +86,18 @@ $glassHeight: 150px;
 }
 
 .toggle {
-  --button-size: 30px;
-  --bar-height: 3px;
+  --button-size: 16px;
+  --bar-height: 2px;
+
+  @include minTablet {
+    --button-size: 26px;
+    --bar-height: 3px;
+  }
+
+  @include minDesktop {
+    --button-size: 30px;
+    --bar-height: 3px;
+  }
 
   --webkit-appearance: none;
   appearance: none;
@@ -105,11 +120,11 @@ $glassHeight: 150px;
   }
 
   &:before {
-    top: 23%;
+    top: 21%;
   }
 
   &:after {
-    bottom: 23%;
+    bottom: 21%;
   }
 
 
@@ -127,10 +142,10 @@ $glassHeight: 150px;
 }
 
 .sticky {
-  --sticky-image-size: 32px;
+  --sticky-image-size: 28px;
 
   @include minTablet {
-    --sticky-image-size: 48px;
+    --sticky-image-size: 42px;
   }
 
   @include minDesktop(false) {
@@ -177,6 +192,10 @@ $glassHeight: 150px;
 
 .stickyToggle {
   flex: 0 0 auto;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   margin-right: -1rem;
+
+  @include minNav {
+    display: none;
+  }
 }

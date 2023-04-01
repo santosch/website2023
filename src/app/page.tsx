@@ -18,6 +18,8 @@ export default function Home() {
                 <Hero>
                     {(open, setOpen) => (
                         <Navigation
+                            open={open}
+                            setOpen={setOpen}
                             entries={[
                                 {id: 'skills', label: 'Skills'},
                                 {id: 'vita', label: 'Vita'},

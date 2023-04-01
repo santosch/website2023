@@ -23,7 +23,12 @@ export default function Hero(
 
     return (
         <>
-            <header className={styles.hero}>
+            <header className={classNames(
+                styles.hero,
+                {
+                    [styles.hero__hidden]: open,
+                }
+            )}>
                 <div className={styles.image}>
                     <div className={classNames(styles.bar, styles.glass)}>
                         <section>
@@ -67,18 +72,20 @@ export default function Hero(
                     <h5 className={styles.stickyHeadline}>
                         Sebastian Antosch
                     </h5>
-                    <div
-                        className={styles.stickyToggle}
-                        onClick={toggle}
-                    >
+                    {children &&
                         <div
-                            className={classNames(
-                                styles.toggle,
-                                {
-                                    [styles.toggle__open]: open,
-                                }
-                        )}/>
-                    </div>
+                            className={styles.stickyToggle}
+                            onClick={toggle}
+                        >
+                            <div
+                                className={classNames(
+                                    styles.toggle,
+                                    {
+                                        [styles.toggle__open]: open,
+                                    }
+                            )}/>
+                        </div>
+                    }
                 </section>
             </header>
             { children && children(open, setOpen) }

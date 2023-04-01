@@ -1,6 +1,7 @@
 
 $minDesktop: 1100px;
 $minTablet: 600px;
+$minNav: 1740px;
 
 @mixin minTablet($andPrint: true) {
   @media (min-width: $minTablet) {
@@ -26,5 +27,11 @@ $minTablet: 600px;
     @media screen and (min-width: $minDesktop) {
       @content;
     }
+  }
+}
+
+@mixin minNav() {
+  @media screen and (min-width: $minNav) {
+    @content;
   }
 }
