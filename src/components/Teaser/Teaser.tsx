@@ -1,6 +1,7 @@
 import styles from "./Teaser.module.scss";
 import {FaEnvelope, FaGithub, FaXing} from "react-icons/fa";
 import type {ReactElement} from "react";
+import {useInView} from "react-intersection-observer";
 
 export default function Teaser(
     {
@@ -13,13 +14,23 @@ export default function Teaser(
         author: string,
     }
 ): JSX.Element {
+    const {ref, inView} = useInView({
+        threshold: 0,
+        triggerOnce: true,
+        fallbackInView: true,
+    })
+
     return (
-        <div className={styles.teaser}>
+        <div
+            ref={ref}
+            className={styles.teaser}
+        >
             <video
                 poster={`/assets/video/${videoKey}.jpg`}
-                autoPlay={true}
+                autoPlay={inView}
                 loop={true}
                 muted={true}
+                preload={inView ? 'auto' : 'none'}
             >
                 <source
                     src={`/assets/video/${videoKey}.mp4`}
