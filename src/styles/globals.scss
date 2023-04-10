@@ -56,6 +56,11 @@
 
   @media print {
     --graph-slot-width: 15px;
+    --foreground: #000000;
+    --foreground-dark: #444444;
+    --background: #ffffff;
+    --background-dark: #ffffff;
+    --background-light: #ffffff;
   }
 
 }
@@ -72,11 +77,24 @@ html,
 body {
   max-width: 100vw;
   min-height: 100%;
+
+  @media print {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+
+  @media print {
+    font-size: 11pt;
+  }
+}
+
+@page {
+  size: A3; // little hack to allow us to have more room in the print styles
 }
 
 body {

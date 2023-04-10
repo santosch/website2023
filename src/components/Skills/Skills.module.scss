@@ -37,6 +37,10 @@
 
   svg {
     transform: scale(-1, 1);
+
+    @media print {
+      filter: hue-rotate(180deg) invert(1) brightness(1.2);
+    }
   }
 
   @include minDesktop(false) {
@@ -104,6 +108,12 @@
 
   @media screen and (max-width: 350px) {
     display: none;
+  }
+
+  @media print {
+    svg {
+      filter: hue-rotate(180deg) invert(1) brightness(1.1);
+    }
   }
 }
 
