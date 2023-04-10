@@ -101,6 +101,10 @@
   @include minDesktop {
     margin: 0 0 -25px 0;
   }
+
+  @media screen and (max-width: 350px) {
+    display: none;
+  }
 }
 
 .radarChartDummy {

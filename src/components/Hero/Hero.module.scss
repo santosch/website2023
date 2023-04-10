@@ -65,26 +65,46 @@ $glassHeight: 150px;
   flex-wrap: wrap;
 
   border-left: var(--border);
+  border-radius: 2rem 0 0 0;
 
   @include minDesktop {
     flex-wrap: nowrap;
+  }
+
+  // fix line display
+  &:before {
+    content: "";
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: calc(-1 * var(--line-width));
+    left: calc(-1 * var(--line-width));
+    border-left: var(--border);
+    border-top: var(--border);
+    border-radius: 2rem 0 0 0;
+
+    @include minDesktop {
+      display: none;
+    }
+
   }
 }
 
 .photoContainer {
   margin-top: calc(-1 * ((var(--photo-size) - (2 * var(--line-width))) / 2));
-  margin-left: calc(-1 * var(--line-width));
+  padding-left: 1rem;
   width: 100%;
+  position: relative;
+  z-index: 1;
 
   @include minDesktop {
     width: auto;
     flex: 0 0 auto;
+    padding: 0;
 
     margin-left: calc(-1 * ((var(--photo-size) - (2 * var(--line-width))) / 2));
     margin-top: calc(-1 *  ((var(--photo-size) - #{$glassHeight}) / 2));
     margin-bottom: calc(-1 *  ((var(--photo-size) - #{$glassHeight}) / 2));
-    position: relative;
-    z-index: 1;
   }
 }
 
@@ -110,22 +130,36 @@ $glassHeight: 150px;
 
 .headlineContainer {
   flex: 1 1 auto;
-  padding: 1rem 2rem;
+  padding: 1rem;
   line-height: 1.0;
+
+  @include minDesktop {
+    padding: 1rem 2rem;
+  }
 }
 
 .headline {
   margin-bottom: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.8rem;
+
+  @include minTablet {
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+  }
 }
 
 .subheadline {
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   font-family: var(--font-default);
   font-weight: lighter;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+  @include minTablet {
+    font-size: 1.2rem;
+  }
 }
 
 .toggleContainer {
