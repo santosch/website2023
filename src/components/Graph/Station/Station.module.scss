@@ -10,7 +10,8 @@ $imageSize: 50px;
   }
 
   @media print {
-    margin-top: 1rem;
+    padding-top: 1rem;
+    page-break-after: avoid;
   }
 }
 

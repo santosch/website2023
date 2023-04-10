@@ -15,6 +15,7 @@ $glassHeight: 150px;
 
   @media print {
     --photo-size: 140px;
+    margin-bottom: 1rem;
   }
 
   position: relative;
@@ -94,7 +95,7 @@ $glassHeight: 150px;
 
   @media print {
     border-left: none;
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
 
   @include minDesktop {
@@ -175,6 +176,10 @@ $glassHeight: 150px;
 
   @include minDesktop {
     padding: 1rem 2rem;
+  }
+
+  @media print {
+    padding-bottom: 2rem;
   }
 }
 

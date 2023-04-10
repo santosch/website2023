@@ -48,7 +48,7 @@ export default function Hero(
                                             Sebastian Antosch
                                         </h1>
                                         <h2 className={styles.subheadline}>
-                                            Softwareentwickler • Javascript-Junkie • UI-Enthusiast
+                                            Softwareentwickler • Typescript-Tüftler • UI-Enthusiast
                                         </h2>
                                     </div>
                                     {children &&
