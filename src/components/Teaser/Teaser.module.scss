@@ -1,7 +1,5 @@
 @import "../../styles/variables";
 
-$socialDiameter: 40px;
-
 .teaser {
   position: relative;
 
@@ -57,7 +55,16 @@ $socialDiameter: 40px;
 }
 
 .social {
-  margin-left: - (($socialDiameter + 4) / 2);
+  --socialDiameter: 30px;
+  --borderWidth: 2px;
+  --iconSize: 14px;
+
+  @include minTablet {
+    --socialDiameter: 40px;
+    --iconSize: 20px;
+  }
+
+  margin-left: calc((-1 * var(--socialDiameter) / 2) - var(--borderWidth));
   margin-top: 36px;
 
   @media print {
@@ -67,14 +74,15 @@ $socialDiameter: 40px;
 
 .socialIcon {
   display: block;
-  width: $socialDiameter;
-  height: $socialDiameter;
+  width: var(--socialDiameter);
+  height: var(--socialDiameter);
   background-color: var(--background);
   border-radius: 50%;
   text-align: center;
-  line-height: $socialDiameter - 2px;
+  line-height: calc(var(--socialDiameter) - var(--borderWidth));
+  font-size: var(--iconSize);
   margin-bottom: 36px;
-  border: 2px solid var(--highlight);
+  border: var(--borderWidth) solid var(--highlight);
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
   transition: 0.3s color;
 

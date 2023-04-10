@@ -100,7 +100,7 @@ $glassHeight: 150px;
 }
 
 .photoContainer {
-  margin-top: calc(-1 * ((var(--photo-size) - (2 * var(--line-width))) / 2));
+  margin-top: calc(-1 * ((var(--photo-size) / 2) - var(--line-width)));
   padding-left: 1rem;
   width: 100%;
   position: relative;
@@ -260,7 +260,7 @@ $glassHeight: 150px;
 
 .stickyPhotoContainer {
   flex: 0 0 auto;
-  margin-left: calc(-1 * (var(--sticky-image-size) - 4px) / 2);
+  margin-left: calc(-1 * (var(--sticky-image-size) / 2) - var(--half-line-width));
   transform: translate(0, 10px);
 }
 
