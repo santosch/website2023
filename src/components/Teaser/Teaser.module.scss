@@ -110,6 +110,10 @@
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
   margin: 1rem 0;
+
+  @media print {
+    color: var(--foreground-dark);
+  }
 }
 
 .quoteText {

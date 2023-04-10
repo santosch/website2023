@@ -13,6 +13,10 @@ $glassHeight: 150px;
     --photo-size: 210px;
   }
 
+  @media print {
+    --photo-size: 140px;
+  }
+
   position: relative;
   z-index: 200;
   transition: 0.7s transform;
@@ -49,6 +53,12 @@ $glassHeight: 150px;
   @include minDesktop {
     background-position: left bottom;
   }
+
+  @media print {
+    min-height: 0;
+    box-shadow: none;
+    background-image: none;
+  }
 }
 
 .bar {
@@ -56,7 +66,7 @@ $glassHeight: 150px;
   display: flex;
   position: relative;
 
-  @include minDesktop {
+  @include minDesktop(false) {
     height: $glassHeight;
   }
 }
@@ -65,6 +75,12 @@ $glassHeight: 150px;
   background-color: rgba(66, 66, 66, 0.5);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4);
+
+  @media print {
+    background-color: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
 }
 
 .container {
@@ -75,6 +91,11 @@ $glassHeight: 150px;
 
   border-left: var(--border);
   border-radius: 2rem 0 0 0;
+
+  @media print {
+    border-left: none;
+    padding-top: 1rem;
+  }
 
   @include minDesktop {
     flex-wrap: nowrap;
@@ -95,7 +116,6 @@ $glassHeight: 150px;
     @include minDesktop {
       display: none;
     }
-
   }
 }
 
@@ -114,6 +134,11 @@ $glassHeight: 150px;
     margin-left: calc(-1 * ((var(--photo-size) - (2 * var(--line-width))) / 2));
     margin-top: calc(-1 *  ((var(--photo-size) - #{$glassHeight}) / 2));
     margin-bottom: calc(-1 *  ((var(--photo-size) - #{$glassHeight}) / 2));
+  }
+
+  @media print {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -135,6 +160,12 @@ $glassHeight: 150px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
+
+  @media print {
+    border-bottom: var(--border);
+    margin-left: -50px;
+    padding-left: 50px;
+  }
 }
 
 .headlineContainer {
@@ -153,6 +184,10 @@ $glassHeight: 150px;
   padding-bottom: 0.5rem;
   font-size: 1.8rem;
 
+  @media print {
+    text-shadow: none;
+  }
+
   @include minTablet {
     padding-bottom: 1rem;
     font-size: 2.5rem;
@@ -166,6 +201,10 @@ $glassHeight: 150px;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
+  @media print {
+    text-shadow: none;
+  }
+
   @include minTablet {
     font-size: 1.2rem;
   }
@@ -173,6 +212,10 @@ $glassHeight: 150px;
 
 .toggleContainer {
   flex: 0 0 auto;
+
+  @media print {
+    display: none;
+  }
 }
 
 .toggle {
