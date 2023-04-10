@@ -3,7 +3,15 @@
 $glassHeight: 150px;
 
 .hero {
-  --image-size: 210px;
+  --photo-size: 120px;
+
+  @include minTablet {
+    --photo-size: 160px;
+  }
+
+  @include minDesktop {
+    --photo-size: 210px;
+  }
 
   position: relative;
   z-index: 200;
@@ -38,7 +46,10 @@ $glassHeight: 150px;
   box-sizing: content-box;
   display: flex;
   position: relative;
-  height: $glassHeight;
+
+  @include minDesktop {
+    height: $glassHeight;
+  }
 }
 
 .glass {
@@ -51,16 +62,30 @@ $glassHeight: 150px;
   position: relative;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
+  border-left: var(--border);
+
+  @include minDesktop {
+    flex-wrap: nowrap;
+  }
 }
 
 .photoContainer {
-  flex: 0 0 auto;
+  margin-top: calc(-1 * ((var(--photo-size) - (2 * var(--line-width))) / 2));
+  margin-left: calc(-1 * var(--line-width));
+  width: 100%;
 
-  margin-left: calc(-1 * ((var(--image-size) - 4px) / 2));
-  margin-top: calc(-1 *  ((var(--image-size) - #{$glassHeight}) / 2));
-  margin-bottom: calc(-1 *  ((var(--image-size) - #{$glassHeight}) / 2));
-  position: relative;
-  z-index: 1;
+  @include minDesktop {
+    width: auto;
+    flex: 0 0 auto;
+
+    margin-left: calc(-1 * ((var(--photo-size) - (2 * var(--line-width))) / 2));
+    margin-top: calc(-1 *  ((var(--photo-size) - #{$glassHeight}) / 2));
+    margin-bottom: calc(-1 *  ((var(--photo-size) - #{$glassHeight}) / 2));
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .photo {
@@ -68,10 +93,19 @@ $glassHeight: 150px;
   border-radius: 50%;
   border: var(--border);
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  box-sizing: content-box;
+  width: var(--photo-size);
+  height: var(--photo-size);
 
   @media print {
     box-shadow: none;
   }
+}
+
+.rightContainer {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
 }
 
 .headlineContainer {
@@ -203,7 +237,7 @@ $glassHeight: 150px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.stickyToggleContainer {
+.toggleContainer {
   flex: 0 0 auto;
   padding: 0.5rem 1rem;
   margin-right: -1rem;

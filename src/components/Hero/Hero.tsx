@@ -42,28 +42,30 @@ export default function Hero(
                                         className={styles.photo}
                                     />
                                 </div>
-                                <div className={styles.headlineContainer}>
-                                    <h1 className={styles.headline}>
-                                        Sebastian Antosch
-                                    </h1>
-                                    <h2 className={styles.subheadline}>
-                                        Softwareentwickler • Javascript-Junkie • UI-Enthusiast
-                                    </h2>
-                                </div>
-                                {children &&
-                                    <div
-                                        className={styles.stickyToggleContainer}
-                                        onClick={toggle}
-                                    >
-                                        <div
-                                            className={classNames(
-                                                styles.toggle,
-                                                {
-                                                    [styles.toggle__open]: open,
-                                                }
-                                            )}/>
+                                <div className={styles.rightContainer}>
+                                    <div className={styles.headlineContainer}>
+                                        <h1 className={styles.headline}>
+                                            Sebastian Antosch
+                                        </h1>
+                                        <h2 className={styles.subheadline}>
+                                            Softwareentwickler • Javascript-Junkie • UI-Enthusiast
+                                        </h2>
                                     </div>
-                                }
+                                    {children &&
+                                        <div
+                                            className={styles.toggleContainer}
+                                            onClick={toggle}
+                                        >
+                                            <div
+                                                className={classNames(
+                                                    styles.toggle,
+                                                    {
+                                                        [styles.toggle__open]: open,
+                                                    }
+                                                )}/>
+                                        </div>
+                                    }
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -88,7 +90,7 @@ export default function Hero(
                     </h5>
                     {children &&
                         <div
-                            className={styles.stickyToggleContainer}
+                            className={styles.toggleContainer}
                             onClick={toggle}
                         >
                             <div
