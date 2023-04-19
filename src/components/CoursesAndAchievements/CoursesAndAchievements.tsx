@@ -14,7 +14,6 @@ import HardskillZf2 from "./Stations/Hardskill/HardskillZf2";
 import HardskillMySqlPerformance from "./Stations/Hardskill/HardskillMySqlPerformance";
 import HardskillPhpUnit from "./Stations/Hardskill/HardskillPhpUnit";
 import SoftskillRadicalCandor from "./Stations/Softskill/SoftskillRadicalCandor";
-import SoftskillRecruiting from "./Stations/Softskill/SoftskillRecruiting";
 import SoftskillIntercultural from "./Stations/Softskill/SoftskillIntercultural";
 import SoftskillILeadershipProgram from "./Stations/Softskill/SoftskillILeadershipProgram";
 import SoftskillILeadershipBasics from "./Stations/Softskill/SoftskillILeadershipBasics";
@@ -67,15 +66,6 @@ export default function CoursesAndAchievements(): JSX.Element {
                         spaceBefore={true}
                     >
                         <SoftskillIntercultural />
-                    </Entry>
-
-                    <Entry
-                        s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.HARDSKILL} />}
-                        s3={<Line color={COLORS.SOFTSKILL} event="soft-recruiting" />}
-                        spaceBefore={true}
-                    >
-                        <SoftskillRecruiting />
                     </Entry>
 
                     <Entry
