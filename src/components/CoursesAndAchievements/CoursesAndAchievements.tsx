@@ -20,6 +20,8 @@ import SoftskillILeadershipProgram from "./Stations/Softskill/SoftskillILeadersh
 import SoftskillILeadershipBasics from "./Stations/Softskill/SoftskillILeadershipBasics";
 import SoftskillIInsights from "./Stations/Softskill/SoftskillIInsights";
 import SoftskillConflicts from "./Stations/Softskill/SoftskillConflicts";
+import SoftskillFireprotection
+    from "@santosch/components/CoursesAndAchievements/Stations/Softskill/SoftskillFireprotection";
 
 
 
@@ -30,27 +32,38 @@ export default function CoursesAndAchievements(): JSX.Element {
             <div className={styles.innerContainer}>
                 <Graph>
 
+
+
                     <Entry
-                        s1={<Line color={COLORS.DEFAULT} event="soft" />}
+                        s1={<Line color={COLORS.DEFAULT} />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} />}
                     >
                         <Softskill />
                     </Entry>
 
                     <Entry
-                        s1={<Line color={COLORS.DEFAULT} tr={COLORS.SOFTSKILL} />}
-                        s2={<Line bl={COLORS.SOFTSKILL} />}
-                    />
+                        s1={<Line color={COLORS.DEFAULT} />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} event="soft-fireprotection" />}
+                        spaceBefore={true}
+                    >
+                        <SoftskillFireprotection />
+                    </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-radical-candor" />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} event="soft-radical-candor" />}
+                        spaceBefore={true}
                     >
                         <SoftskillRadicalCandor />
                     </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-intercultural" />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} event="soft-intercultural" />}
                         spaceBefore={true}
                     >
                         <SoftskillIntercultural />
@@ -58,7 +71,8 @@ export default function CoursesAndAchievements(): JSX.Element {
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-recruiting" />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} event="soft-recruiting" />}
                         spaceBefore={true}
                     >
                         <SoftskillRecruiting />
@@ -66,32 +80,37 @@ export default function CoursesAndAchievements(): JSX.Element {
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} tr={COLORS.ACHIEVEMENT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} x={COLORS.ACHIEVEMENT} />}
-                        s3={<Line bl={COLORS.ACHIEVEMENT} />}
+                        s2={<Line color={COLORS.HARDSKILL} x={COLORS.ACHIEVEMENT} />}
+                        s3={<Line color={COLORS.SOFTSKILL} x={COLORS.ACHIEVEMENT} />}
+                        s4={<Line bl={COLORS.ACHIEVEMENT} />}
                     />
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} />}
-                        s3={<Line color={COLORS.ACHIEVEMENT} event="achievement-feature-challenge" />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} />}
+                        s4={<Line color={COLORS.ACHIEVEMENT} event="achievement-feature-challenge" />}
                     >
                         <SoftskillILeadershipProgram />
                     </Entry>
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} br={COLORS.ACHIEVEMENT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} x={COLORS.ACHIEVEMENT} />}
-                        s3={<Line tl={COLORS.ACHIEVEMENT} />}
+                        s2={<Line color={COLORS.HARDSKILL} x={COLORS.ACHIEVEMENT} />}
+                        s3={<Line color={COLORS.SOFTSKILL} x={COLORS.ACHIEVEMENT} />}
+                        s4={<Line tl={COLORS.ACHIEVEMENT} />}
                     />
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-leadership-program" />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} event="soft-leadership-program" />}
                     >
                         <SoftskillIInsights />
                     </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-insights" />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} event="soft-insights" />}
                         spaceBefore={true}
                     >
                         <SoftskillILeadershipBasics />
@@ -99,7 +118,8 @@ export default function CoursesAndAchievements(): JSX.Element {
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-leadership-basics" />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} event="soft-leadership-basics" />}
                         spaceBefore={true}
                     >
                         <SoftskillConflicts />
@@ -107,7 +127,8 @@ export default function CoursesAndAchievements(): JSX.Element {
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s2={<Line color={COLORS.SOFTSKILL} event="soft-conflicts" />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
+                        s3={<Line color={COLORS.SOFTSKILL} event="soft-conflicts" />}
                         spaceBefore={true}
                     >
                         <Hardskill />
@@ -115,23 +136,21 @@ export default function CoursesAndAchievements(): JSX.Element {
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} br={COLORS.SOFTSKILL} />}
-                        s2={<Line tl={COLORS.SOFTSKILL} />}
+                        s2={<Line color={COLORS.HARDSKILL} x={COLORS.SOFTSKILL} />}
+                        s3={<Line tl={COLORS.SOFTSKILL} />}
                     />
 
                     <Entry
-                        s1={<Line color={COLORS.DEFAULT} event="hard" />}
+                        s1={<Line color={COLORS.DEFAULT} />}
+                        s2={<Line color={COLORS.HARDSKILL} />}
                     >
                         <HardskillMySqlPerformance />
                     </Entry>
 
                     <Entry
-                        s1={<Line color={COLORS.DEFAULT} tr={COLORS.HARDSKILL} />}
-                        s2={<Line bl={COLORS.HARDSKILL} />}
-                    />
-
-                    <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} event="hard-mysql" />}
+                        spaceBefore={true}
                     >
                         <HardskillPhpUnit />
                     </Entry>
@@ -139,19 +158,20 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} tr={COLORS.ACHIEVEMENT} />}
                         s2={<Line color={COLORS.HARDSKILL} x={COLORS.ACHIEVEMENT} />}
-                        s3={<Line bl={COLORS.ACHIEVEMENT} />}
+                        s3={<Line x={COLORS.ACHIEVEMENT} />}
+                        s4={<Line bl={COLORS.ACHIEVEMENT} />}
                     />
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} event="hard-phpunit" />}
-                        s3={<Line color={COLORS.ACHIEVEMENT} />}
+                        s4={<Line color={COLORS.ACHIEVEMENT} />}
                     >
                         <HardskillZf2 />
                     </Entry>
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s2={<Line color={COLORS.HARDSKILL} />}
-                        s3={<Line color={COLORS.ACHIEVEMENT} event="achievement-excellence-program" />}
+                        s4={<Line color={COLORS.ACHIEVEMENT} event="achievement-excellence-program" />}
                         spaceBefore={true}
                     >
                         <Achievements />
@@ -159,7 +179,8 @@ export default function CoursesAndAchievements(): JSX.Element {
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} br={COLORS.ACHIEVEMENT} />}
                         s2={<Line color={COLORS.HARDSKILL} x={COLORS.ACHIEVEMENT} />}
-                        s3={<Line tl={COLORS.ACHIEVEMENT} />}
+                        s3={<Line x={COLORS.ACHIEVEMENT} />}
+                        s4={<Line tl={COLORS.ACHIEVEMENT} />}
                     />
 
 
