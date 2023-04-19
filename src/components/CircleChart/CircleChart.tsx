@@ -2,6 +2,7 @@
 
 import {memo} from "react";
 import ReactApexChart from "react-apexcharts";
+import COLORS from "src/styles/colors.module.scss";
 
 const CircleChart = memo(function CircleChart(
     {
@@ -48,7 +49,7 @@ const CircleChart = memo(function CircleChart(
                             }
                         },
                         track: {
-                            background: '#424242',
+                            background: COLORS.backgroundLight,
                             strokeWidth: '100%',
                             margin: 0, // margin is in pixels
                             dropShadow: {
@@ -72,14 +73,14 @@ const CircleChart = memo(function CircleChart(
                 },
 
                 fill: {
-                    colors: ['#00bbff'],
+                    colors: [COLORS.highlight],
                     type: 'gradient',
                     gradient: {
                         shade: 'dark',
                         type: 'horizontal',
                         shadeIntensity: 0.5,
                         // no gradient for values < 50 since it starts in the middle then
-                        gradientToColors: [value < 50 ? '#00bbff' : '#abe5a1'],
+                        gradientToColors: [value < 50 ? COLORS.highlight : COLORS.highlightSecondary],
                         inverseColors: true,
                         opacityFrom: 1,
                         opacityTo: 1,

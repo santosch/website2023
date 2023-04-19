@@ -1,6 +1,7 @@
 "use client"
 
 import {memo, useCallback, useRef} from "react";
+import COLORS from "src/styles/colors.module.scss";
 import ReactApexChart from "react-apexcharts";
 
 const RadarChart = memo(function RadarChart(
@@ -65,12 +66,12 @@ const RadarChart = memo(function RadarChart(
                 xaxis: {
                     categories: Object.keys(values),
                     axisBorder: {
-                        color: '#161616',
+                        color: COLORS.backgroundDark,
                         show: false,
                     },
                     labels: {
                         style: {
-                            colors: getArrayWithSelected('#888888', '#00bbff')
+                            colors: getArrayWithSelected(COLORS.foregroundDark, COLORS.highlight)
                         },
                     },
                 },
@@ -89,31 +90,31 @@ const RadarChart = memo(function RadarChart(
                 plotOptions: {
                     radar: {
                         polygons: {
-                            strokeColors: '#161616',
-                            connectorColors: getArrayWithSelected('#161616', '#00bbff'),
+                            strokeColors: COLORS.backgroundDark,
+                            connectorColors: getArrayWithSelected(COLORS.backgroundDark, COLORS.highlight),
                             fill: {
-                                colors: ['#212121', '#424242']
+                                colors: [COLORS.background, COLORS.backgroundLight]
                             },
                         }
                     },
                 },
                 markers: {
                     size: 6,
-                    colors: ['#00bbff'],
-                    strokeColors: ['#00bbff'],
+                    colors: [COLORS.highlight],
+                    strokeColors: [COLORS.highlight],
                     strokeWidth: 2,
                 },
                 tooltip: {
                     enabled: false,
                 },
                 fill: {
-                    colors: ['#00bbff'],
+                    colors: [COLORS.highlight],
                     type: 'gradient',
                     gradient: {
                         shade: 'dark',
                         type: 'horizontal',
                         shadeIntensity: 0.5,
-                        gradientToColors: ['#abe5a1'],
+                        gradientToColors: [COLORS.highlightSecondary],
                         inverseColors: true,
                         opacityFrom: 0.6,
                         opacityTo: 0.6,

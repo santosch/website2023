@@ -1,3 +1,5 @@
+import COLORS from "src/styles/colors.module.scss";
+
 export default function Head() {
     const url = 'https://sebastian-antosch.de/';
     const title = 'Sebastian Antosch';
@@ -69,19 +71,19 @@ export default function Head() {
             />
             <link rel="mask-icon"
                   href="/assets/icons/safari-pinned-tab.svg"
-                  color="#00bbff"
+                  color={COLORS.highlight}
             />
             <link rel="shortcut icon"
                   href="/assets/icons/favicon.ico"
             />
             <meta name="msapplication-TileColor"
-                  content="#222222"
+                  content={COLORS.background}
             />
             <meta name="msapplication-config"
                   content="/assets/icons/browserconfig.xml"
             />
             <meta name="theme-color"
-                  content="#222222"
+                  content={COLORS.background}
             />
         </>
     )

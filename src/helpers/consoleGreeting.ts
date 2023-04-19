@@ -1,3 +1,4 @@
+import COLORS from "src/styles/colors.module.scss";
 
 function helloWorld(): string {
     return `
@@ -22,11 +23,11 @@ HHHHHHHHH     HHHHHHHHH    eeeeeeeeeeeeee llllllllllllllll   ooooooooooo        
 `
 }
 
-const headline = 'color: #00bbff; font-weight: bold; font-size: 1.2rem';
+const headline = `color: ${COLORS.highlight}; font-weight: bold; font-size: 1.2rem`;
 const unset = 'color: unset; font-weight: unset; font-size: unset;';
 
 export default function consoleGreeting(): void {
-    console.log('%c' + helloWorld(), 'color: #00bbff');
+    console.log('%c' + helloWorld(), `color: ${COLORS.highlight}`);
     console.log(`    
 👋 Hello fellow developer! I see you are interested in the technology behind this page!
    So let's have a look 😊   

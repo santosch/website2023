@@ -1,0 +1,12 @@
+@import "variables";
+
+:export {
+  foreground: $foreground;
+  foregroundDark: $foregroundDark;
+  background: $background;
+  backgroundDark: $backgroundDark;
+  backgroundLight: $backgroundLight;
+  highlight: $highlight;
+  highlightDark: $highlightDark;
+  highlightSecondary: $highlightSecondary;
+}
