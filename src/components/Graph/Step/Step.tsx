@@ -29,7 +29,10 @@ export default function Step(
             className={styles.container}
             style={cssVars}
             onMouseOver={highlight}
+            onTouchStart={highlight}
             onMouseOut={unHighlight}
+            // prevent "tap to search" in chrome mobile
+            onClick={(e) => e.preventDefault()}
         >
             <div className={classNames(
                 styles.date,

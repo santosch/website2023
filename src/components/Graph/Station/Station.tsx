@@ -26,7 +26,10 @@ export default function Station(
             className={styles.container}
             style={cssVars}
             onMouseOver={highlight}
+            onTouchStart={highlight}
             onMouseOut={unHighlight}
+            // prevent "tap to search" in chrome mobile
+            onClick={(e) => e.preventDefault()}
         >
             <div className={styles.content}>
                 <h4 className={styles.text}>
