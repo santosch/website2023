@@ -1,0 +1,34 @@
+@import "../styles/variables";
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include minTablet {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.headline {
+  font-size: 5rem;
+}
+
+@include minTablet {
+  .text {
+    flex: 1 1 auto;
+    padding-bottom: 4rem; // make it "more centered" optically
+    padding-right: 1rem;
+  }
+
+  .imgContainer {
+    flex: 0 0 auto;
+  }
+}
+
+
+.img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+}
