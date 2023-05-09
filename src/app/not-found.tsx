@@ -23,7 +23,6 @@ export default function NotFound() {
                         width={800}
                         height={800}
                         className={styles.img}
-                        unoptimized={true}
                     />
                 </div>
             </section>

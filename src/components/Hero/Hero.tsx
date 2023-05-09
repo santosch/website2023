@@ -40,7 +40,6 @@ export default function Hero(
                                         width="210"
                                         height="210"
                                         className={styles.photo}
-                                        unoptimized={true}
                                     />
                                 </div>
                                 <div className={styles.rightContainer}>
@@ -84,7 +83,6 @@ export default function Hero(
                             width="64"
                             height="64"
                             className={classNames(styles.photo, styles.stickyPhoto)}
-                            unoptimized={true}
                         />
                     </div>
                     <h5 className={styles.stickyHeadline}>
