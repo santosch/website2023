@@ -72,7 +72,9 @@ export default function Teaser(
 
                         <div className={styles.quote}>
                             <h3 className={styles.quoteText}>
-                                {quote}
+                                <>
+                                    {quote}
+                                </>
                             </h3>
                             <div className={styles.quoteAuthor}>
                                 ~ {author}
