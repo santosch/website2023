@@ -1,5 +1,10 @@
 import type React from "react";
 import Card from "@santosch/components/Card/Card";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Impressum • Sebastian Antosch',
+};
 
 export default function Impressum(): React.ReactNode {
     return (

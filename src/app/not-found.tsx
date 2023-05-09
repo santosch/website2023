@@ -1,6 +1,11 @@
 import Hero from "@santosch/components/Hero/Hero";
 import styles from "./not-found.module.scss";
 import Image from "next/image";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: '404 • Sebastian Antosch',
+};
 
 export default function NotFound() {
     return (

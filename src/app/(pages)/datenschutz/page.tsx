@@ -1,6 +1,11 @@
 import type React from "react";
 import styles from './page.module.scss';
 import Card from "@santosch/components/Card/Card";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Datenschutz • Sebastian Antosch',
+};
 
 export default function Datenschutz(): React.ReactNode {
     return (
