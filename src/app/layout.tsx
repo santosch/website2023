@@ -12,6 +12,7 @@ const banner = '/assets/images/socialbanner.jpg';
 export const metadata: Metadata = {
     title,
     description,
+    metadataBase: new URL(url),
     viewport: 'width=device-width, initial-scale=1',
     authors: {
         name: 'Sebastian Antosch',
