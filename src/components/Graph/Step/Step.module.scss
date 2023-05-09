@@ -38,7 +38,7 @@
       top: 0.5rem;
       border-radius: 50%;
       border: 2px solid transparent;
-      transition: 0.3s background-color;
+      transition: 0.3s border-color;
 
       @media print {
           border-color: var(--step-color);
