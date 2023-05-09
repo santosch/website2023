@@ -50,6 +50,14 @@ export const metadata: Metadata = {
         'msapplication-TileColor': COLORS.background,
         'msapplication-config': '/assets/icons/browserconfig.xml',
         canonical: url,
+    },
+    // prevent safari from knowing things better than we do...
+    formatDetection: {
+        telephone: false,
+        date: false,
+        email: false,
+        url: false,
+        address: false,
     }
 }
 
