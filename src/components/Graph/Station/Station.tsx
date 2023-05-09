@@ -49,6 +49,7 @@ export default function Station(
                         className={styles.image}
                         width={50}
                         height={50}
+                        unoptimized={true}
                     />
                 </div>
             }
