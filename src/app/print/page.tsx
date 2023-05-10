@@ -36,9 +36,22 @@ export default function Print(): JSX.Element {
                     <div className={styles.pagebreak}></div>
                     Test2
                 </div>
-                <div className={styles.main}>
+                <div className={styles.main} style={{marginTop: -84}}>
                     <Vita
+                        headlineProfessional={(
+                            <h2 className={styles.headline}>
+                                Beruflicher Werdegang
+                            </h2>
+                        )}
+                        headlineSchool={(
+                            <h2 className={styles.headline} style={{marginTop: 40}}>
+                                Schulische Ausbildung
+                            </h2>
+                        )}
                     />
+                    <h2 className={styles.headline}>
+                        Weiterbildungen
+                    </h2>
                     <CoursesAndAchievements />
                 </div>
             </div>

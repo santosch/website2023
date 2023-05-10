@@ -34,6 +34,15 @@ $side: 300px;
   padding-left: var(--left-col-width);
 }
 
+.headline {
+  padding: 5px 0 5px var(--left-col-width);
+  margin: 0;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background-color: #ddd;
+  color: #fff;
+}
+
 .pagebreak {
   page-break-before: always;
 }
