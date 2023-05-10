@@ -16,21 +16,3 @@
     margin-left: 0;
   }
 }
-
-.headline {
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 1.5rem;
-
-  @include minTablet {
-    font-size: 1.8rem;
-  }
-
-  @include minDesktop {
-    font-size: 2rem;
-  }
-
-  @media print {
-    page-break-before: always;
-  }
-}

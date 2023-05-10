@@ -46,11 +46,13 @@
     }
   }
 
-  &__highlighted {
-    color: var(--step-color);
+  @media screen {
+    &__highlighted {
+      color: var(--step-color);
 
-    &:after {
-      border-color: var(--step-color);
+      &:after {
+        border-color: var(--step-color);
+      }
     }
   }
 }

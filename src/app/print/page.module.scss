@@ -1,0 +1,39 @@
+$padding: 20px;
+$side: 300px;
+
+.grid {
+  display: flex;
+
+  &__center {
+    align-items: center;
+  }
+}
+
+.aside {
+  flex: 0 0 $side;
+  background-color: #dddddd;
+  padding: $padding;
+  border-right: var(--border);
+}
+
+.main {
+  flex: 1 1 auto;
+  padding-right: 30px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: var(--border);
+  position: relative;
+  right: - $side / 2;
+}
+
+.header {
+  padding-left: var(--left-col-width);
+}
+
+.pagebreak {
+  page-break-before: always;
+}

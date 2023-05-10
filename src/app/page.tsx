@@ -10,6 +10,7 @@ import Navigation from "@santosch/components/Navigation/Navigation";
 import ObservedArea from "@santosch/components/ScrollObserver/ObservedArea/ObservedArea";
 import ScrollObserver from "@santosch/components/ScrollObserver/ScrollObserver";
 import Hero from "@santosch/components/Hero/Hero";
+import Headline from "@santosch/components/Headline/Headline";
 
 export default function Home() {
     return (
@@ -101,7 +102,14 @@ export default function Home() {
 
                 <ObservedArea id="vita">
                     <section>
-                        <Vita/>
+                        <Vita
+                            headlineProfessional={(
+                                <Headline>Beruflicher Werdegang</Headline>
+                            )}
+                            headlineSchool={(
+                                <Headline>Schulische Ausbildung</Headline>
+                            )}
+                        />
                     </section>
                 </ObservedArea>
 

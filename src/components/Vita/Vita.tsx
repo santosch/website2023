@@ -25,7 +25,15 @@ import Birth from "./Stations/Other/Birth";
 import School from "@santosch/components/Vita/Stations/School/School";
 
 
-export default function Vita(): JSX.Element {
+export default function Vita(
+    {
+        headlineProfessional = null,
+        headlineSchool = null,
+    }: {
+        headlineProfessional?: JSX.Element | null,
+        headlineSchool?: JSX.Element | null,
+    }
+): JSX.Element {
 
     return (
         <div className={styles.container}>
@@ -35,9 +43,7 @@ export default function Vita(): JSX.Element {
                         s1={<Line color={COLORS.DEFAULT} />}
                         s4={<Line color={COLORS.CHECK} />}
                     >
-                        <h2 className={styles.headline}>
-                            Beruflicher Werdegang
-                        </h2>
+                        {headlineProfessional}
                     </Entry>
 
                     <Entry
@@ -165,9 +171,7 @@ export default function Vita(): JSX.Element {
                         s2={<Line color={COLORS.HSA} event="hsa-bachelor" />}
                         s3={<Line color={COLORS.ISAN} />}
                     >
-                        <h2 className={styles.headline}>
-                            Schulische Ausbildung
-                        </h2>
+                        {headlineSchool}
                         <Hsa />
                     </Entry>
                     <Entry
