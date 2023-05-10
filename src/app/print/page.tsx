@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./page.module.scss";
 import Vita from "@santosch/components/Vita/Vita";
 import CoursesAndAchievements from "@santosch/components/CoursesAndAchievements/CoursesAndAchievements";
@@ -6,6 +8,7 @@ import classNames from "classnames";
 import {FaEnvelope, FaGlobe, FaHome, FaPassport, FaPhone} from "react-icons/fa";
 import dynamic from "next/dynamic";
 import {backendSkills, frontendSkills, toolSkills} from "@santosch/data/skills";
+import {useEffect} from "react";
 
 const RadarChart = dynamic(
     () => import("@santosch/components/RadarChart/RadarChart"),
@@ -22,7 +25,19 @@ const RadarChart = dynamic(
  * Please excuse this not-so-well-structured page.
  * It was late.
  */
+
 export default function Print(): JSX.Element {
+
+    let printTimeout = 0;
+    useEffect(() => {
+        clearTimeout(printTimeout);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        printTimeout = window.setTimeout(() => {
+            window.print();
+        }, 2000)
+    }, []);
+
+
     return (
         <>
             <div className={classNames(styles.grid, styles.grid__center)}>
