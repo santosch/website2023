@@ -4,7 +4,24 @@ import CoursesAndAchievements from "@santosch/components/CoursesAndAchievements/
 import Image from "next/image";
 import classNames from "classnames";
 import {FaEnvelope, FaGlobe, FaHome, FaPassport, FaPhone} from "react-icons/fa";
+import dynamic from "next/dynamic";
+import {backendSkills, frontendSkills, toolSkills} from "@santosch/data/skills";
 
+const RadarChart = dynamic(
+    () => import("@santosch/components/RadarChart/RadarChart"),
+    {
+        ssr: false,
+    }
+);
+
+/**
+ * This whole print page is a bit messy,
+ * but it primarily exists because I did not want to update a separate CV in PowerPoint or Word
+ * and is not really intended for public access
+ *
+ * Please excuse this not-so-well-structured page.
+ * It was late.
+ */
 export default function Print(): JSX.Element {
     return (
         <>
@@ -98,12 +115,6 @@ export default function Print(): JSX.Element {
                             </div>
                         </div>
                     ))}
-
-                    <div className={styles.pagebreak}></div>
-
-
-
-                    Test2
                 </div>
                 <div className={styles.main} style={{marginTop: -84}}>
                     <Vita
@@ -118,6 +129,36 @@ export default function Print(): JSX.Element {
                             </h2>
                         )}
                     />
+
+                    <h2 className={styles.headline} style={{marginTop: 40}}>
+                        Skills
+                    </h2>
+
+                    <div className={styles.skillsContainer}>
+                        <div className={styles.skillsContainerInner}>
+                            <div className={styles.chartContainer}>
+                                <h3 className={styles.chartTitle}>Frontend</h3>
+                                <RadarChart
+                                    values={frontendSkills}
+                                    height={400}
+                                />
+                            </div>
+                            <div className={styles.chartContainer}>
+                                <h3 className={styles.chartTitle}>Backend</h3>
+                                <RadarChart
+                                    values={backendSkills}
+                                    height={280}
+                                />
+                            </div>
+                            <div className={styles.chartContainer}>
+                                <h3 className={styles.chartTitle}>Tools</h3>
+                                <RadarChart
+                                    values={toolSkills}
+                                    height={280}
+                                />
+                            </div>
+                        </div>
+                    </div>
 
                     <div className={styles.pagebreak}></div>
                     <h2 className={styles.headline} style={{marginTop: 40, marginBottom: -20}}>

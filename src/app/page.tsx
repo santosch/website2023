@@ -11,6 +11,7 @@ import ObservedArea from "@santosch/components/ScrollObserver/ObservedArea/Obser
 import ScrollObserver from "@santosch/components/ScrollObserver/ScrollObserver";
 import Hero from "@santosch/components/Hero/Hero";
 import Headline from "@santosch/components/Headline/Headline";
+import {backendSkills, frontendSkills, toolSkills} from "@santosch/data/skills";
 
 export default function Home() {
     return (
@@ -39,34 +40,14 @@ export default function Home() {
                     <section>
                         <Skills
                             title="Frontend"
-                            categories={{
-                                HTML: 85,
-                                ['(S)CSS']: 85,
-                                JS: 95,
-                                TypeScript: 78,
-                                React: 92,
-                                Redux: 87,
-                                NextJS: 35,
-                                jQuery: 75,
-                                KnockoutJS: 85,
-                            }}
+                            categories={frontendSkills}
                         />
                     </section>
                     <div className={styles.dark}>
                         <section>
                             <Skills
                                 title="Backend"
-                                categories={{
-                                    PHP: 80,
-                                    PHPUnit: 70,
-                                    MySQL: 35,
-                                    Laminas: 75,
-                                    TYPO3: 60,
-                                    Joomla: 55,
-                                    Kirby: 60,
-                                    NextJS: 35,
-                                    NodeJS: 45,
-                                }}
+                                categories={backendSkills}
                                 dark={true}
                             />
                         </section>
@@ -74,17 +55,7 @@ export default function Home() {
                     <section>
                         <Skills
                             title="Tools"
-                            categories={{
-                                Git: 85,
-                                PHPStorm: 85,
-                                Bitbucket: 80,
-                                Jira: 70,
-                                Confluence: 65,
-                                Bamboo: 65,
-                                Webpack: 60,
-                                Illustrator: 40,
-                                Photoshop: 65,
-                            }}
+                            categories={toolSkills}
                         />
                     </section>
                 </ObservedArea>
