@@ -12,8 +12,10 @@ $side: 300px;
 .aside {
   flex: 0 0 $side;
   background-color: #dddddd;
+  color: #555;
   padding: $padding;
   border-right: var(--border);
+  text-align: right;
 }
 
 .main {
@@ -41,8 +43,73 @@ $side: 300px;
   text-transform: uppercase;
   background-color: #ddd;
   color: #fff;
+  letter-spacing: 1px;
+}
+
+.sidebarHeadline {
+  text-align: right;
+  margin-top: 80px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-right: - $padding;
+  padding: 3px $padding;
+  background-color: var(--highlight);
+  display: inline-block;
+  margin-left: auto;
+  font-size: 1.0rem;
+  letter-spacing: 1px;
 }
 
 .pagebreak {
   page-break-before: always;
+  height: $padding;
+}
+
+.entry {
+  position: relative;
+  padding: 4px 17px 0 0;
+  margin-top: 16px;
+
+  a {
+    color: inherit;
+  }
+}
+
+.icon {
+  box-sizing: border-box;
+  $size: 34px;
+  width: $size;
+  height: $size;
+  line-height: $size - 4px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid var(--highlight);
+  position: absolute;
+  top: 0;
+  right: - ($padding + $size / 2 + 2px);
+  color: var(--highlight);
+  background-color: var(--foreground-dark)
+}
+
+.language {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+.bar {
+  height: 4px;
+  background-color: #fff;
+  position: relative;
+  right: - $padding;
+  border-radius: 2px 0 0 2px;
+}
+
+.barFill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--highlight);
+  border-radius: 2px 0 0 2px;
 }
