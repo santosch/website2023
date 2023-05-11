@@ -10,6 +10,7 @@ export default function Contact(): JSX.Element {
                 src="/assets/images/contact-bg.jpg"
                 alt=""
                 className={styles.bgImage}
+                loading="lazy"
             />
             <section>
                 <div className={styles.innerContainer}>
