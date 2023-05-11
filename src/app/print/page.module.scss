@@ -1,8 +1,24 @@
 $padding: 20px;
 $side: 280px;
 
+.printHint {
+  padding: 1rem;
+
+  @media print {
+    display: none;
+  }
+}
+
 .grid {
   display: flex;
+  // hack, if we do a display: none, the graphs are missing in the print view
+  height: 0;
+  overflow: hidden;
+
+  @media print {
+    height: auto;
+    overflow: visible;
+  }
 
   &__center {
     align-items: center;

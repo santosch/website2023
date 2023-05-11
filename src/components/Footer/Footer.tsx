@@ -45,7 +45,7 @@ export default function Footer(): JSX.Element {
                     <div className={styles.content}>
                         <div className={styles.f12} />
                         <p className={styles.printNotice}>
-                            <FaInfoCircle/> Die vollständige
+                            <FaInfoCircle/> Die vollständige und ständig aktuelle
                             Version dieses Dokuments ist
                             unter <a href="https://sebastian-antosch.de">
                                 https://sebastian-antosch.de

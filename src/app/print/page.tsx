@@ -5,7 +5,7 @@ import Vita from "@santosch/components/Vita/Vita";
 import CoursesAndAchievements from "@santosch/components/CoursesAndAchievements/CoursesAndAchievements";
 import Image from "next/image";
 import classNames from "classnames";
-import {FaEnvelope, FaGlobe, FaHome, FaPassport, FaPhone} from "react-icons/fa";
+import {FaEnvelope, FaGlobe, FaHome, FaInfoCircle, FaPassport, FaPhone} from "react-icons/fa";
 import dynamic from "next/dynamic";
 import {backendSkills, frontendSkills, toolSkills} from "@santosch/data/skills";
 import {useEffect} from "react";
@@ -19,9 +19,8 @@ const RadarChart = dynamic(
 
 /**
  * This whole print page is a bit messy,
- * but it primarily exists because I did not want to update a separate CV in PowerPoint or Word
- * and is not really intended for public access
- *
+ * but it primarily exists because I did not want to update a separate CV in PowerPoint or Word,
+ * and it is not really intended for public access.
  * Please excuse this not-so-well-structured page.
  * It was late.
  */
@@ -40,6 +39,19 @@ export default function Print(): JSX.Element {
 
     return (
         <>
+            <div className={styles.printHint}>
+                <h1>
+                    <FaInfoCircle /> Druckansicht wird geladen
+                </h1>
+                <div>
+                    Optimiert für Google Chrome
+                    <ul>
+                        <li>Ziel: &quot;Als PDF speichern&quot; (Chrome native, nicht Adobe Plugin)</li>
+                        <li>Ränder: keine</li>
+                        <li>Hintergrundgrafiken aktiviert</li>
+                    </ul>
+                </div>
+            </div>
             <div className={classNames(styles.grid, styles.grid__center)}>
                 <div className={styles.aside}>
                     <Image
@@ -48,6 +60,7 @@ export default function Print(): JSX.Element {
                         width={970}
                         height={970}
                         className={styles.image}
+                        priority={true}
                     />
                 </div>
                 <div className={styles.main}>
@@ -131,7 +144,7 @@ export default function Print(): JSX.Element {
                         </div>
                     ))}
                 </div>
-                <div className={styles.main} style={{marginTop: -84}}>
+                <div className={styles.main} style={{marginTop: -84, paddingBottom: 340}}>
                     <Vita
                         headlineProfessional={(
                             <h2 className={styles.headline}>
