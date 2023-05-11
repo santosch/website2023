@@ -33,6 +33,7 @@ $glassHeight: 150px;
 }
 
 .image {
+  background-color: #768797; // dummy while loading
   background-image: url("/assets/images/sa-moewe-bodensee.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,7 +133,7 @@ $glassHeight: 150px;
     flex: 0 0 auto;
     padding: 0;
 
-    margin-left: calc(-1 * ((var(--photo-size) - (2 * var(--line-width))) / 2));
+    margin-left: calc(-1 * ((var(--photo-size) + (2 * var(--line-width))) / 2));
     margin-top: calc(-1 *  ((var(--photo-size) - #{$glassHeight}) / 2));
     margin-bottom: calc(-1 *  ((var(--photo-size) - #{$glassHeight}) / 2));
   }
@@ -151,6 +152,7 @@ $glassHeight: 150px;
   box-sizing: content-box;
   width: var(--photo-size);
   height: var(--photo-size);
+  background-color: #f6f0ec; // dummy while loading
 
   @media print {
     box-shadow: none;
@@ -308,7 +310,7 @@ $glassHeight: 150px;
 
 .stickyPhotoContainer {
   flex: 0 0 auto;
-  margin-left: calc(-1 * (var(--sticky-image-size) / 2) - var(--half-line-width));
+  margin-left: calc(-1 * ((var(--sticky-image-size) + var(--line-width)) / 2) + var(--half-line-width));
   transform: translate(0, 10px);
 }
 
