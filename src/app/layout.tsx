@@ -78,6 +78,18 @@ export default function RootLayout({
                 href="/assets/images/sebastian-antosch.jpg"
             />
             <link
+                rel="preload"
+                href="/assets/fonts/roboto-slab-v7-latin-regular.woff2"
+                as="font"
+                type="font/woff2"
+            />
+            <link
+                rel="preload"
+                href="/assets/fonts/fa-brands-400.woff2"
+                as="font"
+                type="font/woff2"
+            />
+            <link
                 rel="apple-touch-icon"
                 sizes="180x180"
                 href="/assets/icons/apple-touch-icon.png"
