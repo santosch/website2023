@@ -40,6 +40,7 @@ export default function Hero(
                                         width="210"
                                         height="210"
                                         className={styles.photo}
+                                        priority={true}
                                     />
                                 </div>
                                 <div className={styles.rightContainer}>
