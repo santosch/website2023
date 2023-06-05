@@ -12,9 +12,6 @@ $minTablet: 600px;
 $minNav: 1740px;
 
 @mixin minTablet($andPrint: true) {
-  @media (min-width: $minTablet) {
-    @content;
-  }
   @if $andPrint {
     @media print, (min-width: $minTablet) {
       @content;
