@@ -6,7 +6,7 @@ export default function Check24Teamlead(): JSX.Element {
         <Step
             eventKey="check-teamlead"
             color={COLORS.CHECK}
-            date="seit 10/2022"
+            date="10/2022 - 12/2023"
             title="stellv. Teamleiter Softwareentwicklung"
             tags={['React', 'Redux', 'Laminas']}
         >

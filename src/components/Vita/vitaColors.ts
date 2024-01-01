@@ -7,4 +7,5 @@ export const COLORS = {
     HSA: '#ff5e00',
     CREA: '#dcdb86',
     CHECK: '#005ea8',
+    REONIC: '#ebcd5c',
 } as const;

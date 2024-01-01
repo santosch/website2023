@@ -23,6 +23,8 @@ import SchoolGymnasium from "./Stations/School/SchoolGymnasium";
 import SchoolElementary from "./Stations/School/SchoolElementary";
 import Birth from "./Stations/Other/Birth";
 import School from "@santosch/components/Vita/Stations/School/School";
+import Reonic from "@santosch/components/Vita/Stations/Reonic/Reonic";
+import ReonicDeveloper from "@santosch/components/Vita/Stations/Reonic/ReonicDeveloper";
 
 
 export default function Vita(
@@ -41,32 +43,54 @@ export default function Vita(
                 <Graph>
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s4={<Line color={COLORS.CHECK} />}
+                        s4={<Line color={COLORS.REONIC} />}
                     >
                         {headlineProfessional}
                     </Entry>
 
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
-                        s4={<Line color={COLORS.CHECK} event="check-teamlead" />}
+                        s4={<Line color={COLORS.REONIC} />}
+                    >
+                        <Reonic />
+                    </Entry>
+                    <Entry
+                        s1={<Line color={COLORS.DEFAULT} />}
+                        s4={<Line color={COLORS.REONIC} event="reonic-developer" />}
+                        spaceBefore={true}
+                    >
+                        <ReonicDeveloper />
+                    </Entry>
+                    <Entry
+                        s1={<Line color={COLORS.DEFAULT} br={COLORS.REONIC} />}
+                        s2={<Line x={COLORS.REONIC} />}
+                        s3={<Line x={COLORS.REONIC} />}
+                        s4={<Line tl={COLORS.REONIC}/>}
+                    />
+
+                    <Entry
+                        s1={<Line color={COLORS.DEFAULT} event="check" />}
                     >
                         <Check24 />
                     </Entry>
                     <Entry
+                        s1={<Line color={COLORS.DEFAULT} tr={COLORS.CHECK} />}
+                        s2={<Line x={COLORS.CHECK} />}
+                        s3={<Line x={COLORS.CHECK} />}
+                        s4={<Line bl={COLORS.CHECK}/>}
+                    />
+                    <Entry
                         s1={<Line color={COLORS.DEFAULT} event="isan" />}
-                        s4={<Line color={COLORS.CHECK}/>}
-                        spaceBefore={true}
+                        s4={<Line color={COLORS.CHECK} event="check-teamlead" />}
                     >
                         <Check24Teamlead />
                     </Entry>
-
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} tr={COLORS.ISAN} />}
                         s2={<Line x={COLORS.ISAN} />}
                         s3={<Line bl={COLORS.ISAN} />}
                         s4={<Line color={COLORS.CHECK}/>}
                     />
-
                     <Entry
                         s1={<Line color={COLORS.DEFAULT} />}
                         s3={<Line color={COLORS.ISAN} />}
